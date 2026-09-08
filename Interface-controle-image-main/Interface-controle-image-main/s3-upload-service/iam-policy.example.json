@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "S3UploadServicePhotos",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:DeleteObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::maisonchazal/image/products-hd/*",
+        "arn:aws:s3:::maisonchazal/image/products-web/*"
+      ]
+    }
+  ]
+}

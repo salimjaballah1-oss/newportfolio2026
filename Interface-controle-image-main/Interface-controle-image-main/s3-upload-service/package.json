@@ -1,0 +1,20 @@
+{
+  "name": "s3-upload-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Micro-service dédié à l'upload des photos HD produits directement sur S3 (contourne la limite de taille de l'API Admin Chazal)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.699.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "multer": "^2.2.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

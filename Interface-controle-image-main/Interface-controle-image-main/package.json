@@ -1,0 +1,30 @@
+{
+  "name": "interface",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"node upload-server.cjs\" \"node s3-upload-service/server.js\"",
+    "dev:vite": "vite",
+    "dev:server": "node upload-server.cjs",
+    "dev:s3": "node s3-upload-service/server.js",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.27"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "concurrently": "^10.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.2.0",
+    "sharp": "^0.35.3",
+    "vite": "^7.3.1",
+    "vite-plugin-vue-devtools": "^8.0.5"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

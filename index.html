@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salim Jaballah — Développeur & Alternant BTS SIO</title>
+<meta name="description" content="Portfolio de Salim Jaballah, étudiant en BTS SIO (option SLAM) en alternance chez Chazal. Développement, automatisation, projets et parcours professionnel.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salim Jaballah — Développeur & Alternant BTS SIO">
+<meta property="og:description" content="Développement, automatisation et projets — parcours BTS SIO (SLAM), alternance chez Chazal.">
+<meta property="og:locale" content="fr_FR">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Fonts : Inter (texte) + Space Grotesk (titres) — Google Fonts, libres de droit -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Écran de chargement (bref, décoratif — ignoré par les lecteurs d'écran) -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__name">
+    <span>S</span><span>a</span><span>l</span><span>i</span><span>m</span><span class="loader__space"></span><span>J</span><span>a</span><span>b</span><span>a</span><span>l</span><span>l</span><span>a</span><span>h</span>
+  </div>
+</div>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="#accueil" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#a-propos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#alternance">Alternance</a>
+      <a href="#projets">Projets</a>
+      <a href="#parcours-e5">Parcours E5</a>
+      <a href="#contact" class="site-nav__cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ACCUEIL -->
+  <section id="accueil" class="hero">
+    <div class="container">
+      <p class="eyebrow reveal">Étudiant BTS SIO — option SLAM</p>
+      <h1 class="hero__title">
+        <span class="reveal">Développeur</span>
+        <span class="reveal">& automatisation.</span>
+      </h1>
+      <p class="hero__lead reveal">
+        Actuellement en 2<sup>e</sup> année de BTS SIO (session 2027), en alternance chez
+        <strong>Chazal</strong> où je développe des outils internes et des automatisations
+        pour le service marketing et le service informatique.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#projets" class="btn btn--primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn--ghost">Me contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="a-propos" class="section">
+    <div class="container">
+      <h2 class="section__title reveal">À propos</h2>
+
+      <div class="about-grid">
+        <div class="reveal">
+          <h3 class="about-subtitle">Parcours</h3>
+          <ol class="timeline">
+            <li>
+              <span class="timeline__period">Avant le BTS</span>
+              <p>Bac STI2D, puis un BUT MMI orienté développement et IA, avant de rejoindre le BTS SIO pour me concentrer pleinement sur le développement.</p>
+            </li>
+            <li>
+              <span class="timeline__period">2025 — 2026 · SIO1</span>
+              <p>1<sup>re</sup> année de BTS SIO au Lycée Louis Pergaud. Réalisation de CinéSIO et de site-vitrine-BTSIO, mes premiers projets web complets.</p>
+            </li>
+            <li>
+              <span class="timeline__period">Depuis le 01/09/2026 · SIO2</span>
+              <p>2<sup>e</sup> année, en alternance chez Chazal (2 semaines en entreprise / 3 semaines en formation), au sein du service informatique de l'établissement de Dole.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="reveal">
+          <h3 class="about-subtitle">Comment je travaille</h3>
+          <ul class="trait-list">
+            <li>Curieux — j'aime comprendre comment un outil fonctionne avant de le réutiliser.</li>
+            <li>Autonome sur mes développements, avec des points réguliers avec mon maître d'alternance.</li>
+            <li>Persévérant face à un bug ou une techno inconnue.</li>
+            <li>À l'aise pour apprendre vite une nouvelle technologie quand un projet l'exige.</li>
+            <li>Orienté résolution de problèmes concrets plutôt que solutions théoriques.</li>
+          </ul>
+
+          <h3 class="about-subtitle about-subtitle--spaced">Objectifs</h3>
+          <p class="muted">
+            À l'issue du BTS SIO, je souhaite continuer vers le développement et l'automatisation
+            de solutions informatiques. Je réfléchis encore entre une poursuite d'études et une
+            entrée directe dans la vie active — cette page sera mise à jour à mesure que ce projet se précise.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences" class="section section--muted">
+    <div class="container">
+      <h2 class="section__title reveal">Compétences</h2>
+      <p class="section__intro reveal">
+        Des technologies utilisées concrètement sur mes projets — scolaires, personnels ou en alternance.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3>Développement web</h3>
+          <div class="tags">
+            <span class="tag">PHP</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">HTML / CSS</span>
+          </div>
+          <p class="skill-card__ref">CinéSIO, site-vitrine-BTSIO, outils internes Chazal</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Automatisation & scripts</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Node.js</span>
+          </div>
+          <p class="skill-card__ref">Automatisation catalogue et traitement d'images chez Chazal</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Bases de données</h3>
+          <div class="tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SQL</span>
+          </div>
+          <p class="skill-card__ref">CinéSIO, site-vitrine-BTSIO (Supabase)</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Cloud & services</h3>
+          <div class="tags">
+            <span class="tag">Amazon S3</span>
+            <span class="tag">Firebase</span>
+          </div>
+          <p class="skill-card__ref">Stockage et traitement d'images, système de catalogue Chazal</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Sécurité & bonnes pratiques</h3>
+          <div class="tags">
+            <span class="tag">Hachage des mots de passe</span>
+            <span class="tag">Requêtes préparées</span>
+            <span class="tag">Validation des données</span>
+            <span class="tag">Protection XSS</span>
+          </div>
+          <p class="skill-card__ref">Mises en œuvre sur CinéSIO (PDO, password_hash, htmlspecialchars)</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3>Outils & déploiement</h3>
+          <div class="tags">
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">Coolify</span>
+          </div>
+          <p class="skill-card__ref">Déploiement des outils internes en intranet chez Chazal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALTERNANCE -->
+  <section id="alternance" class="section">
+    <div class="container">
+      <h2 class="section__title reveal">Alternance chez Chazal</h2>
+
+      <div class="experience-card reveal">
+        <div class="experience-card__head">
+          <div>
+            <h3>Développeur informatique en alternance</h3>
+            <p class="muted">Service informatique — établissement de Dole · depuis le 01/09/2026</p>
+          </div>
+        </div>
+
+        <p>
+          J'interviens au sein du service informatique, aux côtés d'un responsable informatique,
+          d'un responsable ERP et d'un administrateur réseau. Je travaille en lien direct avec mon
+          maître d'alternance ainsi qu'avec les services marketing/communication et qualité lorsqu'ils
+          ont besoin d'un outil ou d'une évolution.
+        </p>
+
+        <h4 class="experience-card__subtitle">Mes missions</h4>
+        <ul class="check-list">
+          <li>Création et évolution d'interfaces web internes</li>
+          <li>Automatisation de tâches répétitives</li>
+          <li>Récupération et exploitation de données via des API</li>
+          <li>Gestion et traitement d'images produits</li>
+          <li>Conception d'outils pour faciliter le travail du marketing</li>
+          <li>Amélioration d'outils existants selon les retours utilisateurs</li>
+          <li>Tests, corrections et évolutions des applications</li>
+          <li>Déploiement et maintenance des solutions (intranet, via Coolify)</li>
+        </ul>
+
+        <p class="note">
+          Les réalisations professionnelles détaillées (gestion des photos produits, système de
+          catalogue) sont présentées dans la section <a href="#projets">Projets</a> — sans code ni
+          donnée confidentielle, conformément à la politique de l'entreprise.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="section section--muted">
+    <div class="container">
+      <h2 class="section__title reveal">Projets & réalisations</h2>
+      <p class="section__intro reveal">
+        Une sélection de réalisations représentatives, plutôt qu'une liste exhaustive de dépôts.
+      </p>
+
+      <div class="project-list">
+
+        <!-- Réalisation Chazal A -->
+        <article class="project reveal" id="projet-photos">
+          <div class="project__media" aria-hidden="true">
+            <span>Capture à venir</span>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--pro">Alternance — Chazal</span>
+              <span class="muted">Depuis janvier 2026</span>
+            </div>
+            <h3>Gestion et enrichissement des photos produits</h3>
+            <p class="project__role">Contexte</p>
+            <p>De nombreux produits de l'enseigne « Les Halles by Chazal » n'avaient pas encore de photo, et la gestion des images demandait plusieurs manipulations manuelles réparties sur différents emplacements de fichiers.</p>
+            <p class="project__role">Solution développée</p>
+            <p>Une application web interne permettant de rechercher des produits, de visualiser l'état de leurs photos, d'en ajouter (versions Web et HD), de filtrer les produits sans image, et de détecter automatiquement le code produit à partir du nom de fichier.</p>
+            <p class="project__role">Ce que j'ai personnellement réalisé</p>
+            <p>Après avoir constaté qu'une personne ajoutait les photos une par une, j'ai développé une fonctionnalité d'<strong>import en masse</strong> : sélection de plusieurs fichiers, association automatique aux produits à partir des noms de fichiers, avec une validation humaine avant l'envoi final.</p>
+            <div class="tags tags--tight">
+              <span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">Node.js</span>
+              <span class="tag">Python</span><span class="tag">Amazon S3</span>
+            </div>
+            <p class="note">Projet interne — code non public. Détail complet disponible sur demande (rapport de projet).</p>
+          </div>
+        </article>
+
+        <!-- Réalisation Chazal B -->
+        <article class="project reveal" id="projet-catalogue">
+          <div class="project__media" aria-hidden="true">
+            <span>Capture à venir</span>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--pro">Alternance — Chazal</span>
+              <span class="muted">En production</span>
+            </div>
+            <h3>Système de mise en ligne du catalogue produit</h3>
+            <p class="project__role">Contexte</p>
+            <p>La mise en ligne du catalogue était auparavant préparée et envoyée manuellement par le service marketing, sans outil dédié.</p>
+            <p class="project__role">Solution développée</p>
+            <p>Un système permettant d'envoyer un catalogue depuis une interface dédiée, qui traite ensuite les informations et gère leur mise en ligne, avec Firebase pour la gestion des données.</p>
+            <p class="project__role">Ce que j'ai personnellement réalisé</p>
+            <p>J'ai participé directement au développement du système, notamment à la création de l'interface d'envoi et de gestion des catalogues.</p>
+            <div class="tags tags--tight">
+              <span class="tag">Python</span><span class="tag">Firebase</span><span class="tag">Amazon S3</span>
+            </div>
+            <p class="note">Projet interne, actuellement utilisé en production — code non public.</p>
+          </div>
+        </article>
+
+        <!-- CinéSIO -->
+        <article class="project reveal" id="projet-cinesio">
+          <div class="project__media" aria-hidden="true">
+            <span>Capture à venir</span>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge">Projet BTS SIO — SIO1</span>
+              <span class="muted">2025 — 2026 · Solo</span>
+            </div>
+            <h3>CinéSIO</h3>
+            <p class="project__role">Contexte & objectif</p>
+            <p>Application web développée seul en 1<sup>re</sup> année de BTS SIO : un catalogue de films avec comptes utilisateurs et système de favoris.</p>
+            <p class="project__role">Ce que j'ai réalisé</p>
+            <p>Catalogue de films (affiche, genre, durée, synopsis, pays), inscription/connexion avec gestion de session, système de favoris, ajout de films via formulaire validé côté serveur, upload d'avatar de profil.</p>
+            <p class="project__role">Architecture & sécurité</p>
+            <p>Architecture en couches (pages / repositories / connexion PDO), mots de passe hachés (<code>password_hash</code> / <code>password_verify</code>), requêtes préparées, échappement systématique à l'affichage (<code>htmlspecialchars</code>), validation complète des formulaires.</p>
+            <p class="project__role">Difficulté rencontrée</p>
+            <p>Faire cohabiter proprement les différentes technologies du projet (PHP, PDO, PostgreSQL, bonnes pratiques de sécurité) — un vrai apprentissage en cours de route.</p>
+            <div class="tags tags--tight">
+              <span class="tag">PHP</span><span class="tag">PDO</span><span class="tag">PostgreSQL</span>
+            </div>
+            <p class="note">Dépôt GitHub public — lien ajouté une fois la rotation du mot de passe de la base confirmée.</p>
+          </div>
+        </article>
+
+        <!-- site-vitrine-BTSIO -->
+        <article class="project reveal" id="projet-vitrine">
+          <div class="project__media" aria-hidden="true">
+            <span>Capture à venir</span>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge">Projet BTS SIO — SIO1</span>
+              <span class="muted">Solo</span>
+            </div>
+            <h3>site-vitrine-BTSIO</h3>
+            <p class="project__role">Contexte</p>
+            <p>Deuxième exercice de BTS SIO1, réalisé seul, reprenant une architecture proche de CinéSIO (pages, repositories, connexion PDO) appliquée cette fois à un catalogue de produits, avec en plus une gestion de panier.</p>
+            <p class="project__role">Ce que j'ai réalisé</p>
+            <p>Catalogue de produits, favoris, panier, formulaire de contact, inscription/connexion.</p>
+            <div class="tags tags--tight">
+              <span class="tag">PHP</span><span class="tag">PDO</span><span class="tag">PostgreSQL</span>
+            </div>
+            <p class="note">Fiche à compléter (période exacte, difficultés rencontrées, captures).</p>
+          </div>
+        </article>
+
+        <!-- calorie-app -->
+        <article class="project reveal" id="projet-calorie">
+          <div class="project__media" aria-hidden="true">
+            <span>Capture à venir</span>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--perso">Projet personnel</span>
+              <span class="muted">Hors ligne — fonctionne en local</span>
+            </div>
+            <h3>calorie-app</h3>
+            <p class="project__role">Contexte</p>
+            <p>Application personnelle de suivi alimentaire, développée en dehors du cadre scolaire pour explorer React et l'intégration d'une API externe.</p>
+            <div class="tags tags--tight">
+              <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Node.js</span>
+            </div>
+            <p class="note">Fiche à compléter (fonctionnalités précises, captures).</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS E5 -->
+  <section id="parcours-e5" class="section">
+    <div class="container">
+      <h2 class="section__title reveal">Parcours professionnel — synthèse E5</h2>
+      <p class="section__intro reveal">
+        Tableau de synthèse reliant chaque réalisation aux compétences du référentiel BTS SIO
+        réellement mobilisées, et aux preuves disponibles.
+      </p>
+
+      <div class="table-wrap reveal">
+        <table class="e5-table">
+          <thead>
+            <tr>
+              <th scope="col">Réalisation</th>
+              <th scope="col">Compétences BTS mobilisées</th>
+              <th scope="col">Preuves disponibles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Gestion des photos produits (Chazal)</th>
+              <td>Répondre aux incidents et demandes d'assistance et d'évolution · Mettre à disposition des utilisateurs un service informatique · Travailler en mode projet</td>
+              <td>Rapport de projet interne, captures d'écran (à venir), démonstration possible en soutenance</td>
+            </tr>
+            <tr>
+              <th scope="row">Système de catalogue produit (Chazal)</th>
+              <td>Développer la présence en ligne de l'organisation · Mettre à disposition des utilisateurs un service informatique</td>
+              <td>Explications fonctionnelles, captures (à venir) — code non communicable</td>
+            </tr>
+            <tr>
+              <th scope="row">CinéSIO</th>
+              <td>Mettre à disposition des utilisateurs un service informatique</td>
+              <td>Code source GitHub, captures (à venir)</td>
+            </tr>
+            <tr>
+              <th scope="row">site-vitrine-BTSIO</th>
+              <td>Mettre à disposition des utilisateurs un service informatique</td>
+              <td>Code source GitHub, captures (à venir)</td>
+            </tr>
+            <tr>
+              <th scope="row">calorie-app</th>
+              <td>Organiser son développement professionnel</td>
+              <td>Code source local, captures (à venir)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note reveal">
+        Seules les compétences réellement démontrées par le contenu de chaque réalisation sont
+        indiquées ici — aucune n'est ajoutée par simple supposition.
+      </p>
+    </div>
+  </section>
+
+  <!-- VEILLE / CERTIFICATIONS -->
+  <section id="veille" class="section section--muted">
+    <div class="container">
+      <h2 class="section__title reveal">Certifications</h2>
+      <ul class="check-list reveal">
+        <li>MOOC de la CNIL — protection des données personnelles</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section--contact">
+    <div class="container">
+      <h2 class="section__title reveal">Contact</h2>
+      <p class="section__intro reveal">N'hésitez pas à me contacter pour toute question sur mon parcours ou mes projets.</p>
+
+      <div class="contact-links reveal">
+        <a href="mailto:sjaballah@maisonchazal.com" class="contact-link">
+          sjaballah@maisonchazal.com
+        </a>
+        <a href="https://github.com/salimjaballah1-oss" class="contact-link" target="_blank" rel="noopener">
+          github.com/salimjaballah1-oss
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — BTS SIO, option SLAM · <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

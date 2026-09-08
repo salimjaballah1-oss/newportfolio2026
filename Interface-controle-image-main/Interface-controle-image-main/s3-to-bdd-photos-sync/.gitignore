@@ -1,0 +1,4 @@
+.env
+synced_state.json
+__pycache__/
+*.pyc
