@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="catalogue.pageTitle">Système de mise en ligne du catalogue produit — Salim Jaballah</title>
+<meta name="description" content="Le marketing dépose le PDF du catalogue ; l'application le découpe en pages, repère les produits de chaque page, récupère leurs informations et publie un catalogue numérique consultable dans l'application des commerciaux et dans une visionneuse en ligne.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Système de mise en ligne du catalogue produit — Salim Jaballah">
+<meta property="og:description" content="Le marketing dépose le PDF du catalogue ; l'application le découpe en pages, repère les produits de chaque page, récupère leurs informations et publie un catalogue numérique consultable dans l'application des commerciaux et dans une visionneuse en ligne.">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Page générée : le français est ici, l'anglais dans projets/i18n-projets.js -->
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="../index.html#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="../index.html#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="../index.html#projets" aria-current="true" data-i18n="nav.projects">Projets</a>
+      <a href="../index.html#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="../index.html#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="detail">
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets" data-i18n="detail.back">← Tous les projets</a>
+      <div class="project__meta">
+        <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+        <span class="muted" data-i18n="catalogue.date">Mars → octobre 2026 · en production</span>
+      </div>
+      <h1 class="detail-hero__title" data-i18n="catalogue.title">Système de mise en ligne du catalogue produit</h1>
+      <p class="detail-hero__lead" data-i18n="catalogue.lead">Le marketing dépose le PDF du catalogue ; l'application le découpe en pages, repère les produits de chaque page, récupère leurs informations et publie un catalogue numérique consultable dans l'application des commerciaux et dans une visionneuse en ligne.</p>
+      <dl class="facts">
+          <div><dt data-i18n="fact.period">Période</dt><dd><span data-i18n="catalogue.fact.period">Mars → octobre 2026</span></dd></div>
+          <div><dt data-i18n="fact.role">Mon rôle</dt><dd><span data-i18n="catalogue.fact.role">Conception et développement, seul</span></dd></div>
+          <div><dt data-i18n="fact.users">Utilisateurs</dt><dd><span data-i18n="catalogue.fact.users">Service marketing, commerciaux</span></dd></div>
+          <div><dt data-i18n="fact.status">Statut</dt><dd><span data-i18n="catalogue.fact.status">En production</span></dd></div>
+      </dl>
+      <div class="tags tags--tight"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PyMuPDF</span><span class="tag">Firebase / Firestore</span><span class="tag">Amazon S3</span><span class="tag">API REST</span><span class="tag">Gunicorn</span></div>
+    </div>
+  </section>
+
+  <div class="container detail-cover">
+    <div class="project__media" aria-hidden="true">
+      <span data-i18n="projects.captureSoon">Capture à venir</span>
+    </div>
+  </div>
+
+  <div class="container detail-layout">
+    <aside class="detail-toc">
+      <nav aria-labelledby="tocTitle">
+        <p class="detail-toc__title" id="tocTitle" data-i18n="detail.toc">Sommaire</p>
+        <ol>
+            <li><a href="#contexte" data-i18n="catalogue.contexte.title">Contexte</a></li>
+            <li><a href="#fonctionnement" data-i18n="catalogue.fonctionnement.title">Le pipeline, étape par étape</a></li>
+            <li><a href="#interface" data-i18n="catalogue.interface.title">L'interface web</a></li>
+            <li><a href="#difficultes" data-i18n="catalogue.difficultes.title">Difficultés rencontrées</a></li>
+            <li><a href="#evolution" data-i18n="catalogue.evolution.title">Évolution du projet</a></li>
+            <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
+            <li><a href="#video" data-i18n="detail.video">Démonstration vidéo</a></li>
+            <li><a href="#captures" data-i18n="detail.shots">Captures d'écran</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="detail-content">
+      <section class="detail-section" id="contexte">
+        <h2 data-i18n="catalogue.contexte.title">Contexte</h2>
+        <p data-i18n="catalogue.contexte.0">La mise en ligne du catalogue était préparée et envoyée à la main par le service marketing, sans outil dédié. Il fallait pouvoir publier un catalogue de plusieurs dizaines de pages, avec les produits cliquables, en quelques minutes.</p>
+      </section>
+
+      <section class="detail-section" id="fonctionnement">
+        <h2 data-i18n="catalogue.fonctionnement.title">Le pipeline, étape par étape</h2>
+        <ol class="steps">
+          <li><strong data-i18n="catalogue.fonctionnement.0.0.t">Import du PDF</strong><p data-i18n="catalogue.fonctionnement.0.0.d">Le marketing dépose le PDF depuis l'interface web ; il est stocké sur Amazon S3.</p></li>
+          <li><strong data-i18n="catalogue.fonctionnement.0.1.t">Découpage en images</strong><p data-i18n="catalogue.fonctionnement.0.1.d">Avec PyMuPDF, chaque page devient une image JPG en 200 dpi ; la première sert de couverture.</p></li>
+          <li><strong data-i18n="catalogue.fonctionnement.0.2.t">Repérage des produits</strong><p data-i18n="catalogue.fonctionnement.0.2.d">Des expressions régulières lisent les codes produits imprimés sur chaque page, avec une variante tolérante aux erreurs de reconnaissance (un « I » lu comme « l » ou « | »).</p></li>
+          <li><strong data-i18n="catalogue.fonctionnement.0.3.t">Informations produits</strong><p data-i18n="catalogue.fonctionnement.0.3.d">Chaque code est interrogé sur l'API du site, avec un cache, une pause entre les appels et des nouvelles tentatives.</p></li>
+          <li><strong data-i18n="catalogue.fonctionnement.0.4.t">Publication</strong><p data-i18n="catalogue.fonctionnement.0.4.d">Le catalogue, ses pages et ses produits sont créés dans Firestore, les pages sont rendues publiques sur S3, et un lien vers la visionneuse est généré.</p></li>
+        </ol>
+        <p data-i18n="catalogue.fonctionnement.1">Deux bases Firebase sont gérées (« Les Halles » et « myChazal ») : le choix de la destination — l'une, l'autre ou les deux — se fait au lancement.</p>
+      </section>
+
+      <section class="detail-section" id="interface">
+        <h2 data-i18n="catalogue.interface.title">L'interface web</h2>
+        <ul class="check-list">
+          <li data-i18n="catalogue.interface.0.0"><strong>Étape 1</strong> : import du PDF.</li>
+          <li data-i18n="catalogue.interface.0.1"><strong>Étape 2</strong> : choix du fichier à générer (les catalogues déjà générés sont signalés) et de la base de destination.</li>
+          <li data-i18n="catalogue.interface.0.2"><strong>Étape 3</strong> : suivi en direct en 5 phases, barre de progression, et « détails techniques » repliés avec la console de journal.</li>
+          <li data-i18n="catalogue.interface.0.3"><strong>Catalogues en ligne</strong> : la liste des catalogues actifs, avec leur couverture, leur nombre de pages et un bouton « Copier le lien ».</li>
+          <li data-i18n="catalogue.interface.0.4">Interface simplifiée pour les utilisateurs non administrateurs, et même menu latéral que l'interface photos pour passer d'un outil à l'autre.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="difficultes">
+        <h2 data-i18n="catalogue.difficultes.title">Difficultés rencontrées</h2>
+        <div class="challenges">
+          <div class="challenge">
+            <h3 data-i18n="catalogue.difficultes.0.0.t">Des produits manquants</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="catalogue.difficultes.0.0.p">Sur un vrai catalogue (Automne/Hiver 2026), des produits manquaient après le traitement. En analysant les logs, j'ai découvert que le jeton d'API expirait pendant le traitement : l'API ne renvoyait pas d'erreur, mais une page de connexion avec un statut 200.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="catalogue.difficultes.0.0.s">Un jeton partagé qui détecte cette réponse et se renouvelle automatiquement, plus la correction de deux autres bugs qui faisaient sauter des produits (dont un code mal complété qui donnait une erreur 404).</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="catalogue.difficultes.0.1.t">Limites de requêtes</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="catalogue.difficultes.0.1.p">L'API renvoie des erreurs 429 quand on l'interroge trop vite.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="catalogue.difficultes.0.1.s">Nouvelles tentatives avec une attente croissante, respect de l'en-tête <code>Retry-After</code> et pause quand <code>X-RateLimit-Remaining</code> devient trop bas.</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="catalogue.difficultes.0.2.t">Un traitement trop long</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="catalogue.difficultes.0.2.p">Une version indexait les 14 480 produits du site (483 pages d'API, environ 10 minutes) alors qu'un catalogue n'en contient que quelques centaines.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="catalogue.difficultes.0.2.s">Retour à une interrogation ciblée, code par code : le pipeline ne demande plus que ce dont il a besoin.</span></p>
+          </div>
+        </div>
+        <p data-i18n="catalogue.difficultes.1">Principe retenu : un produit en erreur est compté et signalé, mais ne fait jamais échouer tout le catalogue.</p>
+      </section>
+
+      <section class="detail-section" id="evolution">
+        <h2 data-i18n="catalogue.evolution.title">Évolution du projet</h2>
+        <ol class="timeline">
+          <li><span class="timeline__period" data-i18n="catalogue.evolution.0.0.t">Mars – avril 2026</span><p data-i18n="catalogue.evolution.0.0.d">Première version du pipeline, seconde base Firebase, choix de la base cible.</p></li>
+          <li><span class="timeline__period" data-i18n="catalogue.evolution.0.1.t">Mai 2026</span><p data-i18n="catalogue.evolution.0.1.d">Catalogue dynamique pour la visionneuse, passage à PyMuPDF et Gunicorn.</p></li>
+          <li><span class="timeline__period" data-i18n="catalogue.evolution.0.2.t">Septembre 2026</span><p data-i18n="catalogue.evolution.0.2.d">Fiabilisation complète : limites de requêtes, jeton renouvelé, console de débogage.</p></li>
+          <li><span class="timeline__period" data-i18n="catalogue.evolution.0.3.t">Octobre 2026</span><p data-i18n="catalogue.evolution.0.3.d">Interface repensée pour les non-administrateurs, page « Catalogues en ligne », menu commun avec l'interface photos, clés Firebase sorties du code (variables d'environnement) et mode debug désactivé par défaut.</p></li>
+        </ol>
+        <div class="stats">
+          <div class="stat"><span class="stat__value">33</span><span class="stat__label" data-i18n="catalogue.evolution.1.0">commits, de mars à octobre 2026</span></div>
+          <div class="stat"><span class="stat__value">2</span><span class="stat__label" data-i18n="catalogue.evolution.1.1">bases Firebase alimentées</span></div>
+          <div class="stat"><span class="stat__value">5</span><span class="stat__label" data-i18n="catalogue.evolution.1.2">étapes de suivi visibles par l'utilisateur</span></div>
+        </div>
+      </section>
+
+      <section class="detail-section" id="competences">
+        <h2 data-i18n="detail.skills">Compétences BTS SIO mobilisées</h2>
+        <ul class="check-list">
+          <li data-i18n="catalogue.competences.0.0">Développer la présence en ligne de l'organisation</li>
+          <li data-i18n="catalogue.competences.0.1">Répondre aux incidents et aux demandes d'assistance et d'évolution</li>
+          <li data-i18n="catalogue.competences.0.2">Mettre à disposition des utilisateurs un service informatique</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="video">
+        <h2 data-i18n="detail.video">Démonstration vidéo</h2>
+        <div class="demo-videos">
+          <figure class="demo-video">
+            <video controls muted playsinline preload="none" poster="../assets/projets/catalogue/demo-mise-en-ligne.webp" src="../assets/projets/catalogue/demo-mise-en-ligne.mp4"></video>
+            <figcaption data-i18n="catalogue.video.0">Mise en ligne d'un catalogue : import du PDF, informations du catalogue, puis suivi de la génération.</figcaption>
+          </figure>
+          <figure class="demo-video demo-video--mobile">
+            <video controls muted playsinline preload="none" poster="../assets/projets/catalogue/demo-appli-les-halles.webp" src="../assets/projets/catalogue/demo-appli-les-halles.mp4"></video>
+            <figcaption data-i18n="catalogue.video.1">Le résultat dans l'application Les Halles : le catalogue page par page, et les produits repérés sur chaque page.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="detail-section" id="captures">
+        <h2 data-i18n="detail.shots">Captures d'écran</h2>
+        <p class="gallery__empty" data-i18n="detail.shotsEmpty" hidden>Captures en cours de préparation.</p>
+        <div class="project__thumbs gallery">
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/catalogue/01-depot.webp" alt="Étape 1 : import du PDF du catalogue" loading="lazy" data-i18n-alt="catalogue.shot.0">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/catalogue/02-generer.webp" alt="Étape 2 : choix du PDF, titre, dates de validité et base de destination" loading="lazy" data-i18n-alt="catalogue.shot.1">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/catalogue/03-catalogues-en-ligne.webp" alt="Liste des catalogues en ligne" loading="lazy" data-i18n-alt="catalogue.shot.2">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/catalogue/04-visionneuse.webp" alt="Catalogue publié, affiché dans la visionneuse en ligne" loading="lazy" data-i18n-alt="catalogue.shot.3">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/catalogue/05-suivi.webp" alt="Suivi d'un traitement étape par étape, avec console de débogage" loading="lazy" data-i18n-alt="catalogue.shot.4">
+          </button>
+        </div>
+        <p class="note"><span data-i18n="catalogue.note">Projet interne, utilisé en production — code non public.</span></p>
+      </section>
+    </div>
+  </div>
+
+  <nav class="container detail-pager" aria-label="Autres projets">
+      <a href="synchro-s3-ged.html" class="detail-pager__prev"><span class="detail-pager__dir" data-i18n="detail.prev">Projet précédent</span><span class="detail-pager__name" data-i18n="ged.title">Script de synchronisation des photos vers la GED</span></a>
+      <a href="chazalgo.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="chazalgo.title">ChazalGo — CRM web du réseau commercial</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="i18n-projets.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salim Jaballah — Développeur & Alternant BTS SIO</title>
-<meta name="description" content="Portfolio de Salim Jaballah, étudiant en BTS SIO (option SLAM) en alternance chez Chazal. Développement, automatisation, projets et parcours professionnel.">
+<title id="pageTitle">Salim Jaballah — Développeur & Alternant BTS SIO</title>
+<meta name="description" id="metaDescription" content="Portfolio de Salim Jaballah, étudiant en BTS SIO (option SLAM) en alternance chez Chazal. Développement, automatisation, projets et parcours professionnel.">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f4f2ee">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Salim Jaballah — Développeur & Alternant BTS SIO">
-<meta property="og:description" content="Développement, automatisation et projets — parcours BTS SIO (SLAM), alternance chez Chazal.">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:title" id="ogTitle" content="Salim Jaballah — Développeur & Alternant BTS SIO">
+<meta property="og:description" id="ogDescription" content="Développement, automatisation et projets — parcours BTS SIO (SLAM), alternance chez Chazal.">
+<meta property="og:locale" id="ogLocale" content="fr_FR">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
@@ -32,25 +32,30 @@
   </div>
 </div>
 
-<a class="skip-link" href="#main">Aller au contenu</a>
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 
 <header class="site-header">
   <div class="container site-header__inner">
     <a href="#accueil" class="logo">Salim Jaballah</a>
 
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
-      <span class="sr-only">Ouvrir le menu</span>
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
       <span class="nav-toggle__bar"></span>
       <span class="nav-toggle__bar"></span>
     </button>
 
     <nav class="site-nav" id="siteNav">
-      <a href="#a-propos">À propos</a>
-      <a href="#competences">Compétences</a>
-      <a href="#alternance">Alternance</a>
-      <a href="#projets">Projets</a>
-      <a href="#parcours-e5">Parcours E5</a>
-      <a href="#contact" class="site-nav__cta">Contact</a>
+      <a href="#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="#projets" data-i18n="nav.projects">Projets</a>
+      <a href="#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" id="langFr" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" id="langEn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -60,20 +65,20 @@
   <!-- ACCUEIL -->
   <section id="accueil" class="hero">
     <div class="container">
-      <p class="eyebrow reveal">Étudiant BTS SIO — option SLAM</p>
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">Étudiant BTS SIO — option SLAM</p>
       <h1 class="hero__title">
-        <span class="reveal">Développeur</span>
-        <span class="reveal">& automatisation.</span>
+        <span class="reveal" data-i18n="hero.title1">Développeur</span>
+        <span class="reveal" data-i18n="hero.title2">& automatisation.</span>
       </h1>
-      <p class="hero__lead reveal">
+      <p class="hero__lead reveal" data-i18n="hero.lead">
         Actuellement en 2<sup>e</sup> année de BTS SIO (session 2027), en alternance chez
         <strong>Chazal</strong> où je développe des outils internes et des automatisations
         pour le service marketing et le service informatique.
       </p>
       <div class="hero__actions reveal">
-        <a href="#projets" class="btn btn--primary">Voir mes projets</a>
-        <a href="assets/CV_Salim_Jaballah.pdf" class="btn btn--ghost" download>Télécharger mon CV</a>
-        <a href="#contact" class="btn btn--ghost">Me contacter</a>
+        <a href="#projets" class="btn btn--primary" data-i18n="hero.cta1">Voir mes projets</a>
+        <a href="assets/CV_Salim_Jaballah.pdf" class="btn btn--ghost" download data-i18n="hero.cta2">Télécharger mon CV</a>
+        <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta3">Me contacter</a>
       </div>
     </div>
   </section>
@@ -81,39 +86,39 @@
   <!-- À PROPOS -->
   <section id="a-propos" class="section">
     <div class="container">
-      <h2 class="section__title reveal">À propos</h2>
+      <h2 class="section__title reveal" data-i18n="about.title">À propos</h2>
 
       <div class="about-grid">
         <div class="reveal">
-          <h3 class="about-subtitle">Parcours</h3>
+          <h3 class="about-subtitle" data-i18n="about.parcoursSubtitle">Parcours</h3>
           <ol class="timeline">
             <li>
-              <span class="timeline__period">Avant le BTS</span>
-              <p>Bac STI2D, puis un BUT MMI, avec du développement web mais dans un cursus trop généraliste, mêlé à une forte dimension créa/communication. Grâce à une opportunité d'alternance, j'ai rejoint le BTS SIO pour me spécialiser dans l'informatique pure.</p>
+              <span class="timeline__period" data-i18n="about.t1period">Avant le BTS</span>
+              <p data-i18n="about.t1text">Bac STI2D, puis un BUT MMI, avec du développement web mais dans un cursus trop généraliste, mêlé à une forte dimension créa/communication. Grâce à une opportunité d'alternance, j'ai rejoint le BTS SIO pour me spécialiser dans l'informatique pure.</p>
             </li>
             <li>
               <span class="timeline__period">2025 — 2026 · SIO1</span>
-              <p>1<sup>re</sup> année de BTS SIO au Lycée Louis Pergaud, déjà en alternance chez <strong>Chazal</strong> (2 semaines en entreprise / 3 semaines en formation). Réalisation de CinéSIO et de site-vitrine-BTSIO, mes premiers projets web complets.</p>
+              <p data-i18n="about.t2text">1<sup>re</sup> année de BTS SIO au Lycée Louis Pergaud, déjà en alternance chez <strong>Chazal</strong> (2 semaines en entreprise / 3 semaines en formation). Réalisation de CinéSIO et de site-vitrine-BTSIO, mes premiers projets web complets.</p>
             </li>
             <li>
-              <span class="timeline__period">Depuis le 01/09/2026 · SIO2</span>
-              <p>2<sup>e</sup> année, en alternance chez Chazal (2 semaines en entreprise / 3 semaines en formation), au sein du service informatique de l'établissement de Dole.</p>
+              <span class="timeline__period" data-i18n="about.t3period">Depuis le 01/09/2026 · SIO2</span>
+              <p data-i18n="about.t3text">2<sup>e</sup> année, en alternance chez Chazal (2 semaines en entreprise / 3 semaines en formation), au sein du service informatique de l'établissement de Dole.</p>
             </li>
           </ol>
         </div>
 
         <div class="reveal">
-          <h3 class="about-subtitle">Comment je travaille</h3>
+          <h3 class="about-subtitle" data-i18n="about.workSubtitle">Comment je travaille</h3>
           <ul class="trait-list">
-            <li>Curieux — j'aime comprendre comment un outil fonctionne avant de le réutiliser.</li>
-            <li>Autonome sur mes développements, avec des points réguliers avec mon maître d'alternance.</li>
-            <li>Persévérant face à un bug ou une techno inconnue.</li>
-            <li>À l'aise pour apprendre vite une nouvelle technologie quand un projet l'exige.</li>
-            <li>Orienté résolution de problèmes concrets plutôt que solutions théoriques.</li>
+            <li data-i18n="about.trait1">Curieux — j'aime comprendre comment un outil fonctionne avant de le réutiliser.</li>
+            <li data-i18n="about.trait2">Autonome sur mes développements, avec des points réguliers avec mon maître d'alternance.</li>
+            <li data-i18n="about.trait3">Persévérant face à un bug ou une techno inconnue.</li>
+            <li data-i18n="about.trait4">À l'aise pour apprendre vite une nouvelle technologie quand un projet l'exige.</li>
+            <li data-i18n="about.trait5">Orienté résolution de problèmes concrets plutôt que solutions théoriques.</li>
           </ul>
 
-          <h3 class="about-subtitle about-subtitle--spaced">Objectifs</h3>
-          <p class="muted">
+          <h3 class="about-subtitle about-subtitle--spaced" data-i18n="about.goalsSubtitle">Objectifs</h3>
+          <p class="muted" data-i18n="about.goalsText">
             À l'issue du BTS SIO, je souhaite continuer vers le développement et l'automatisation
             de solutions informatiques. Je réfléchis encore entre une poursuite d'études et une
             entrée directe dans la vie active — cette page sera mise à jour à mesure que ce projet se précise.
@@ -126,68 +131,95 @@
   <!-- COMPÉTENCES -->
   <section id="competences" class="section section--muted">
     <div class="container">
-      <h2 class="section__title reveal">Compétences</h2>
-      <p class="section__intro reveal">
+      <h2 class="section__title reveal" data-i18n="skills.title">Compétences</h2>
+      <p class="section__intro reveal" data-i18n="skills.intro">
         Des technologies utilisées concrètement sur mes projets — scolaires, personnels ou en alternance.
       </p>
 
       <div class="skills-grid">
         <div class="skill-card reveal">
-          <h3>Développement web</h3>
+          <h3 data-i18n="skills.card1.title">Développement web</h3>
           <div class="tags">
             <span class="tag">PHP</span>
             <span class="tag">JavaScript</span>
             <span class="tag">Vue.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Flask</span>
             <span class="tag">HTML / CSS</span>
           </div>
-          <p class="skill-card__ref">CinéSIO, site-vitrine-BTSIO, outils internes Chazal</p>
+          <p class="skill-card__ref" data-i18n="skills.card1.ref">CinéSIO, site-vitrine-BTSIO, interface photos, système de catalogue et CRM ChazalGo chez Chazal, agent emploi</p>
         </div>
 
         <div class="skill-card reveal">
-          <h3>Automatisation & scripts</h3>
+          <h3 data-i18n="skills.card2.title">Automatisation & scripts</h3>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">Node.js</span>
+            <span class="tag">PyMuPDF</span>
+            <span class="tag">sharp</span>
           </div>
-          <p class="skill-card__ref">Automatisation catalogue et traitement d'images chez Chazal</p>
+          <p class="skill-card__ref" data-i18n="skills.card2.ref">Pipeline catalogue (PDF → images → Firestore), traitement d'images, synchronisation S3 → GED chez Chazal</p>
         </div>
 
         <div class="skill-card reveal">
-          <h3>Bases de données</h3>
+          <h3 data-i18n="skills.card3.title">Bases de données</h3>
           <div class="tags">
             <span class="tag">PostgreSQL</span>
             <span class="tag">SQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Supabase</span>
+            <span class="tag" data-i18n="skills.card3.tag2">Règles RLS</span>
+            <span class="tag" data-i18n="skills.card3.tag1">Firestore (NoSQL)</span>
           </div>
-          <p class="skill-card__ref">CinéSIO, site-vitrine-BTSIO (Supabase)</p>
+          <p class="skill-card__ref" data-i18n="skills.card3.ref">CinéSIO, site-vitrine-BTSIO (Supabase), CRM ChazalGo (Supabase, RLS), agent emploi (SQLite), catalogue Chazal (Firestore)</p>
         </div>
 
         <div class="skill-card reveal">
-          <h3>Cloud & services</h3>
+          <h3 data-i18n="skills.card4.title">Cloud, API & IA</h3>
           <div class="tags">
             <span class="tag">Amazon S3</span>
             <span class="tag">Firebase</span>
+            <span class="tag">API REST</span>
+            <span class="tag" data-i18n="skills.card4.tag1">IA générative (OpenRouter)</span>
+            <span class="tag">Postman</span>
           </div>
-          <p class="skill-card__ref">Stockage et traitement d'images, système de catalogue Chazal</p>
+          <p class="skill-card__ref" data-i18n="skills.card4.ref">Stockage et traitement d'images, système de catalogue, génération de visuels produits, tests d'API avec Postman chez Chazal</p>
         </div>
 
         <div class="skill-card reveal">
-          <h3>Sécurité & bonnes pratiques</h3>
+          <h3 data-i18n="skills.card7.title">Mobile</h3>
           <div class="tags">
-            <span class="tag">Hachage des mots de passe</span>
-            <span class="tag">Requêtes préparées</span>
-            <span class="tag">Validation des données</span>
-            <span class="tag">Protection XSS</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">Dart</span>
+            <span class="tag">FlutterFlow</span>
+            <span class="tag">Firebase</span>
           </div>
-          <p class="skill-card__ref">Mises en œuvre sur CinéSIO (PDO, password_hash, htmlspecialchars)</p>
+          <p class="skill-card__ref" data-i18n="skills.card7.ref">Création de l'application Les Halles, maintenance et évolutions de l'application commerciale myChazal</p>
         </div>
 
         <div class="skill-card reveal">
-          <h3>Outils & déploiement</h3>
+          <h3 data-i18n="skills.card5.title">Sécurité & bonnes pratiques</h3>
+          <div class="tags">
+            <span class="tag" data-i18n="skills.card5.tag1">Hachage des mots de passe</span>
+            <span class="tag" data-i18n="skills.card5.tag2">Requêtes préparées</span>
+            <span class="tag" data-i18n="skills.card5.tag3">Validation des données</span>
+            <span class="tag" data-i18n="skills.card5.tag4">Protection XSS</span>
+            <span class="tag" data-i18n="skills.card5.tag5">Jetons CSRF</span>
+            <span class="tag" data-i18n="skills.card5.tag6">Secrets hors du code (.env)</span>
+          </div>
+          <p class="skill-card__ref" data-i18n="skills.card5.ref">Mises en œuvre sur CinéSIO (PDO, password_hash, htmlspecialchars) et sur l'agent emploi (CSRF, serveur local)</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3 data-i18n="skills.card6.title">Outils & déploiement</h3>
           <div class="tags">
             <span class="tag">Git / GitHub</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Nginx</span>
             <span class="tag">Coolify</span>
+            <span class="tag">pytest</span>
           </div>
-          <p class="skill-card__ref">Déploiement des outils internes en intranet chez Chazal</p>
+          <p class="skill-card__ref" data-i18n="skills.card6.ref">Conteneurisation et déploiement des outils internes en intranet chez Chazal, tests automatisés</p>
         </div>
       </div>
     </div>
@@ -196,38 +228,41 @@
   <!-- ALTERNANCE -->
   <section id="alternance" class="section">
     <div class="container">
-      <h2 class="section__title reveal">Alternance chez Chazal</h2>
+      <h2 class="section__title reveal" data-i18n="alt.title">Alternance chez Chazal</h2>
 
       <div class="experience-card reveal">
         <div class="experience-card__head">
           <div>
-            <h3>Développeur informatique en alternance</h3>
-            <p class="muted">Service informatique — établissement de Dole · depuis le 01/09/2026</p>
+            <h3 data-i18n="alt.role">Développeur informatique en alternance</h3>
+            <p class="muted" data-i18n="alt.subtitle">Service informatique — établissement de Dole · depuis le 01/09/2026</p>
           </div>
         </div>
 
-        <p>
+        <p data-i18n="alt.text">
           J'interviens au sein du service informatique, aux côtés d'un responsable informatique,
           d'un responsable ERP et d'un administrateur réseau. Je travaille en lien direct avec mon
           maître d'alternance ainsi qu'avec les services marketing/communication et qualité lorsqu'ils
           ont besoin d'un outil ou d'une évolution.
         </p>
 
-        <h4 class="experience-card__subtitle">Mes missions</h4>
+        <h4 class="experience-card__subtitle" data-i18n="alt.missionsSubtitle">Mes missions</h4>
         <ul class="check-list">
-          <li>Création et évolution d'interfaces web internes</li>
-          <li>Automatisation de tâches répétitives</li>
-          <li>Récupération et exploitation de données via des API</li>
-          <li>Gestion et traitement d'images produits</li>
-          <li>Conception d'outils pour faciliter le travail du marketing</li>
-          <li>Amélioration d'outils existants selon les retours utilisateurs</li>
-          <li>Tests, corrections et évolutions des applications</li>
-          <li>Déploiement et maintenance des solutions (intranet, via Coolify)</li>
+          <li data-i18n="alt.mission1">Création et évolution d'interfaces web internes</li>
+          <li data-i18n="alt.mission2">Automatisation de tâches répétitives</li>
+          <li data-i18n="alt.mission3">Récupération et exploitation de données via des API</li>
+          <li data-i18n="alt.mission4">Gestion et traitement d'images produits</li>
+          <li data-i18n="alt.mission5">Conception d'outils pour faciliter le travail du marketing</li>
+          <li data-i18n="alt.mission6">Amélioration d'outils existants selon les retours utilisateurs</li>
+          <li data-i18n="alt.mission7">Tests, corrections et évolutions des applications</li>
+          <li data-i18n="alt.mission8">Déploiement et maintenance des solutions (intranet, via Coolify)</li>
+          <li data-i18n="alt.mission9">Intégration de fonctions d'IA générative pour les visuels produits</li>
+          <li data-i18n="alt.mission10">Création et maintenance d'applications mobiles (FlutterFlow, Firebase)</li>
+          <li data-i18n="alt.mission11">Test des API avec Postman avant intégration</li>
         </ul>
 
-        <p class="note">
+        <p class="note" data-i18n="alt.note">
           Les réalisations professionnelles détaillées (gestion des photos produits, système de
-          catalogue) sont présentées dans la section <a href="#projets">Projets</a> — sans code ni
+          catalogue, applications myChazal et Les Halles, CRM ChazalGo) sont présentées dans la section <a href="#projets">Projets</a> — sans code ni
           donnée confidentielle, conformément à la politique de l'entreprise.
         </p>
       </div>
@@ -237,138 +272,230 @@
   <!-- PROJETS -->
   <section id="projets" class="section section--muted">
     <div class="container">
-      <h2 class="section__title reveal">Projets & réalisations</h2>
-      <p class="section__intro reveal">
+      <h2 class="section__title reveal" data-i18n="projects.title">Projets & réalisations</h2>
+      <p class="section__intro reveal" data-i18n="projects.intro">
         Une sélection de réalisations représentatives, plutôt qu'une liste exhaustive de dépôts.
       </p>
 
       <div class="project-list">
 
-        <!-- Réalisation Chazal A -->
         <article class="project reveal" id="projet-photos">
-          <div class="project__media" aria-hidden="true">
-            <span>Capture à venir</span>
-          </div>
+          <a class="project__media" href="projets/photos-produits.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/photos/01-recherche.webp" alt="" loading="lazy">
+          </a>
           <div class="project__body">
             <div class="project__meta">
-              <span class="badge badge--pro">Alternance — Chazal</span>
-              <span class="muted">Depuis janvier 2026</span>
+              <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+              <span class="muted" data-i18n="photos.date">Février → octobre 2026 · en production</span>
             </div>
-            <h3>Gestion et enrichissement des photos produits</h3>
-            <p class="project__role">Contexte</p>
-            <p>De nombreux produits de l'enseigne « Les Halles by Chazal » n'avaient pas encore de photo, et la gestion des images demandait plusieurs manipulations manuelles réparties sur différents emplacements de fichiers.</p>
-            <p class="project__role">Solution développée</p>
-            <p>Une application web interne permettant de rechercher des produits, de visualiser l'état de leurs photos, d'en ajouter (versions Web et HD), de filtrer les produits sans image, et de détecter automatiquement le code produit à partir du nom de fichier.</p>
-            <p class="project__role">Ce que j'ai personnellement réalisé</p>
-            <p>Après avoir constaté qu'une personne ajoutait les photos une par une, j'ai développé une fonctionnalité d'<strong>import en masse</strong> : sélection de plusieurs fichiers, association automatique aux produits à partir des noms de fichiers, avec une validation humaine avant l'envoi final.</p>
-            <div class="tags tags--tight">
-              <span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">Node.js</span>
-              <span class="tag">Python</span><span class="tag">Amazon S3</span>
-            </div>
-            <p class="note">Projet interne — code non public. Détail complet disponible sur demande (rapport de projet).</p>
+            <h3 data-i18n="photos.title">Gestion et enrichissement des photos produits</h3>
+            <p class="project__summary" data-i18n="photos.lead">Une application web interne qui permet au service marketing de retrouver n'importe quel produit, de voir l'état de ses photos et d'en ajouter de nouvelles — au bon format, en version web et HD, éventuellement retouchées par IA.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="photos.hl.0">Recherche multi-critères et état des photos de chaque produit</li>
+              <li data-i18n="photos.hl.1">Import en masse : les fichiers sont associés aux produits grâce à leur nom</li>
+              <li data-i18n="photos.hl.2">Retouches par IA générative et format web standard sur fond blanc</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">sharp</span><span class="tag">Amazon S3</span></div>
+            <a class="btn btn--ghost project__more" href="projets/photos-produits.html" data-i18n="detail.more">Voir le projet en détail</a>
           </div>
         </article>
 
-        <!-- Réalisation Chazal B -->
+        <article class="project reveal" id="projet-ged">
+          <a class="project__media" href="projets/synchro-s3-ged.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/ged/01-terminal.webp" alt="" loading="lazy">
+          </a>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+              <span class="muted" data-i18n="ged.date">Août → octobre 2026 · en service</span>
+            </div>
+            <h3 data-i18n="ged.title">Script de synchronisation des photos vers la GED</h3>
+            <p class="project__summary" data-i18n="ged.lead">Un script Python qui recopie automatiquement les nouvelles photos web, déposées sur Amazon S3 par l'interface photos, dans la GED de l'ERP Infologic — avec le bon nom, sans doublon, et une trace de chaque envoi lisible dans Excel.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="ged.hl.0">Une seule photo par produit, toujours la plus récente</li>
+              <li data-i18n="ged.hl.1">Mode simulation, journal détaillé et registre des envois pour Excel</li>
+              <li data-i18n="ged.hl.2">Une erreur n'est jamais perdue : le fichier est retenté au passage suivant</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">Python</span><span class="tag">boto3</span><span class="tag">Amazon S3</span><span class="tag">python-dotenv</span><span class="tag">Planificateur de tâches Windows</span><span class="tag">CSV / Excel</span></div>
+            <a class="btn btn--ghost project__more" href="projets/synchro-s3-ged.html" data-i18n="detail.more">Voir le projet en détail</a>
+          </div>
+        </article>
+
         <article class="project reveal" id="projet-catalogue">
-          <div class="project__media" aria-hidden="true">
-            <span>Capture à venir</span>
-          </div>
+          <a class="project__media" href="projets/catalogue.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/catalogue/03-catalogues-en-ligne.webp" alt="" loading="lazy">
+          </a>
           <div class="project__body">
             <div class="project__meta">
-              <span class="badge badge--pro">Alternance — Chazal</span>
-              <span class="muted">En production</span>
+              <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+              <span class="muted" data-i18n="catalogue.date">Mars → octobre 2026 · en production</span>
             </div>
-            <h3>Système de mise en ligne du catalogue produit</h3>
-            <p class="project__role">Contexte</p>
-            <p>La mise en ligne du catalogue était auparavant préparée et envoyée manuellement par le service marketing, sans outil dédié.</p>
-            <p class="project__role">Solution développée</p>
-            <p>Un système permettant d'envoyer un catalogue depuis une interface dédiée, qui traite ensuite les informations et gère leur mise en ligne, avec Firebase pour la gestion des données.</p>
-            <p class="project__role">Ce que j'ai personnellement réalisé</p>
-            <p>J'ai participé directement au développement du système, notamment à la création de l'interface d'envoi et de gestion des catalogues.</p>
-            <div class="tags tags--tight">
-              <span class="tag">Python</span><span class="tag">Firebase</span><span class="tag">Amazon S3</span>
-            </div>
-            <p class="note">Projet interne, actuellement utilisé en production — code non public.</p>
+            <h3 data-i18n="catalogue.title">Système de mise en ligne du catalogue produit</h3>
+            <p class="project__summary" data-i18n="catalogue.lead">Le marketing dépose le PDF du catalogue ; l'application le découpe en pages, repère les produits de chaque page, récupère leurs informations et publie un catalogue numérique consultable dans l'application des commerciaux et dans une visionneuse en ligne.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="catalogue.hl.0">Pipeline PDF → images → codes produits → Firestore, sans intervention manuelle</li>
+              <li data-i18n="catalogue.hl.1">Suivi en direct du traitement, en 5 étapes lisibles</li>
+              <li data-i18n="catalogue.hl.2">Résiste aux limites de l'API et à l'expiration du jeton</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PyMuPDF</span><span class="tag">Firebase / Firestore</span><span class="tag">Amazon S3</span><span class="tag">API REST</span></div>
+            <a class="btn btn--ghost project__more" href="projets/catalogue.html" data-i18n="detail.more">Voir le projet en détail</a>
           </div>
         </article>
 
-        <!-- CinéSIO -->
+        <article class="project reveal" id="projet-chazalgo">
+          <a class="project__media" href="projets/chazalgo.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/chazalgo/01-carte.webp" alt="" loading="lazy">
+          </a>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+              <span class="muted" data-i18n="chazalgo.date">2026 · en production</span>
+            </div>
+            <h3 data-i18n="chazalgo.title">ChazalGo — CRM web du réseau commercial</h3>
+            <p class="project__summary" data-i18n="chazalgo.lead">Le back-office web de ChazalGo, l'outil de gestion de la relation client utilisé par tout le réseau commercial : suivi d'activité, devis et commandes, leads entrants, animation commerciale et administration des accès.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="chazalgo.hl.0">7 rôles, chacun limité à son périmètre grâce aux règles RLS</li>
+              <li data-i18n="chazalgo.hl.1">Leads reçus par webhook et affectés à la bonne agence</li>
+              <li data-i18n="chazalgo.hl.2">Dashboard, carte d'activité et gestion des utilisateurs</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">RLS</span><span class="tag">Chart.js</span></div>
+            <a class="btn btn--ghost project__more" href="projets/chazalgo.html" data-i18n="detail.more">Voir le projet en détail</a>
+          </div>
+        </article>
+
+        <article class="project reveal" id="projet-mychazal">
+          <a class="project__media project__media--mobile" href="projets/mychazal.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/mychazal/01-lancements.webp" alt="" loading="lazy">
+          </a>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+              <span class="muted" data-i18n="mychazal.date">Depuis août 2026 · maintenance et évolutions</span>
+            </div>
+            <h3 data-i18n="mychazal.title">myChazal — application mobile des commerciaux</h3>
+            <p class="project__summary" data-i18n="mychazal.lead">L'application Android / iOS des commerciaux : catalogues, devis, challenges et points, messagerie. Je la maintiens et la fais évoluer avec un autre développeur de l'entreprise.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="mychazal.hl.0">Build Android réparé et plantages au lancement corrigés</li>
+              <li data-i18n="mychazal.hl.1">Partage d'un catalogue vers la visionneuse en ligne</li>
+              <li data-i18n="mychazal.hl.2">Prospection transférée vers ChazalGo</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">FlutterFlow</span><span class="tag">Firebase</span><span class="tag">Firestore</span></div>
+            <a class="btn btn--ghost project__more" href="projets/mychazal.html" data-i18n="detail.more">Voir le projet en détail</a>
+          </div>
+        </article>
+
+        <article class="project reveal" id="projet-leshalles">
+          <a class="project__media project__media--mobile" href="projets/les-halles.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/leshalles/01-accueil.webp" alt="" loading="lazy">
+          </a>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+              <span class="muted" data-i18n="leshalles.date">Création et évolutions</span>
+            </div>
+            <h3 data-i18n="leshalles.title">Application mobile « Les Halles by Chazal »</h3>
+            <p class="project__summary" data-i18n="leshalles.lead">L'application mobile de l'enseigne « Les Halles by Chazal », utilisée par les magasins pour consulter les catalogues et passer commande. Je l'ai créée avec FlutterFlow, connectée à Firebase, et je la fais évoluer au fil des besoins.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="leshalles.hl.0">Catalogues consultables page par page, avec les produits de chaque page</li>
+              <li data-i18n="leshalles.hl.1">Recherche d'article, fiche produit et ajout au panier</li>
+              <li data-i18n="leshalles.hl.2">Challenges et boutique de cadeaux à points</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">FlutterFlow</span><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Firestore</span><span class="tag">Postman</span></div>
+            <a class="btn btn--ghost project__more" href="projets/les-halles.html" data-i18n="detail.more">Voir le projet en détail</a>
+          </div>
+        </article>
+
         <article class="project reveal" id="projet-cinesio">
-          <div class="project__media" aria-hidden="true">
-            <span>Capture à venir</span>
-          </div>
+          <a class="project__media" href="projets/cinesio.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/cinesio/01-catalogue.webp" alt="" loading="lazy">
+          </a>
           <div class="project__body">
             <div class="project__meta">
-              <span class="badge">Projet BTS SIO — SIO1</span>
-              <span class="muted">2025 — 2026 · Solo</span>
+              <span class="badge" data-i18n="badge.sio1">Projet BTS SIO — SIO1</span>
+              <span class="muted" data-i18n="cinesio.date">2025 — 2026 · Solo</span>
             </div>
-            <h3>CinéSIO</h3>
-            <p class="project__role">Contexte & objectif</p>
-            <p>Application web développée seul en 1<sup>re</sup> année de BTS SIO : un catalogue de films avec comptes utilisateurs et système de favoris.</p>
-            <p class="project__role">Ce que j'ai réalisé</p>
-            <p>Catalogue de films (affiche, genre, durée, synopsis, pays), inscription/connexion avec gestion de session, système de favoris, ajout de films via formulaire validé côté serveur, upload d'avatar de profil.</p>
-            <p class="project__role">Architecture & sécurité</p>
-            <p>Architecture en couches (pages / repositories / connexion PDO), mots de passe hachés (<code>password_hash</code> / <code>password_verify</code>), requêtes préparées, échappement systématique à l'affichage (<code>htmlspecialchars</code>), validation complète des formulaires.</p>
-            <p class="project__role">Difficulté rencontrée</p>
-            <p>Faire cohabiter proprement les différentes technologies du projet (PHP, PDO, PostgreSQL, bonnes pratiques de sécurité) — un vrai apprentissage en cours de route.</p>
-            <div class="tags tags--tight">
-              <span class="tag">PHP</span><span class="tag">PDO</span><span class="tag">PostgreSQL</span>
-            </div>
-            <p class="note">Dépôt GitHub public — lien ajouté une fois la rotation du mot de passe de la base confirmée.</p>
+            <h3 data-i18n="cinesio.title">CinéSIO</h3>
+            <p class="project__summary" data-i18n="cinesio.lead">Mon premier projet web complet en BTS SIO : un catalogue de films avec comptes utilisateurs, favoris et ajout de films, développé seul en PHP avec une attention particulière à la sécurité.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="cinesio.hl.0">Catalogue de films, comptes et favoris</li>
+              <li data-i18n="cinesio.hl.1">Architecture en couches : pages, repositories, connexion PDO</li>
+              <li data-i18n="cinesio.hl.2">Mots de passe hachés, requêtes préparées, échappement à l'affichage</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">PHP</span><span class="tag">PDO</span><span class="tag">PostgreSQL</span><span class="tag">HTML / CSS</span></div>
+            <a class="btn btn--ghost project__more" href="projets/cinesio.html" data-i18n="detail.more">Voir le projet en détail</a>
           </div>
         </article>
 
-        <!-- site-vitrine-BTSIO -->
         <article class="project reveal" id="projet-vitrine">
-          <div class="project__media">
-            <img src="assets/site-vitrine-accueil.png" alt="Page d'accueil du site vitrine « Bad Kings by SAL », réalisé pour l'exercice site-vitrine-BTSIO" loading="lazy">
-          </div>
+          <a class="project__media" href="projets/site-vitrine.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/vitrine/01-accueil.png" alt="" loading="lazy">
+          </a>
           <div class="project__body">
             <div class="project__meta">
-              <span class="badge">Projet BTS SIO — SIO1</span>
-              <span class="muted">Solo</span>
+              <span class="badge" data-i18n="badge.sio1">Projet BTS SIO — SIO1</span>
+              <span class="muted" data-i18n="vitrine.date">Mai 2026 · Solo</span>
             </div>
-            <h3>site-vitrine-BTSIO</h3>
-            <p class="project__role">Contexte</p>
-            <p>Deuxième exercice de BTS SIO1, réalisé seul, reprenant une architecture proche de CinéSIO (pages, repositories, connexion PDO) appliquée cette fois à un catalogue de produits, avec en plus une gestion de panier.</p>
-            <p class="project__role">Ce que j'ai réalisé</p>
-            <p>Catalogue de produits, favoris, panier, formulaire de contact, inscription/connexion.</p>
-            <div class="tags tags--tight">
-              <span class="tag">PHP</span><span class="tag">PDO</span><span class="tag">PostgreSQL</span>
-            </div>
-            <div class="project__gallery">
-              <a class="project__gallery-item" href="assets/site-vitrine-produits.png" target="_blank" rel="noopener">
-                <img src="assets/site-vitrine-produits.png" alt="Catalogue de produits du site vitrine" loading="lazy">
-              </a>
-              <a class="project__gallery-item" href="assets/site-vitrine-fiche-produit.png" target="_blank" rel="noopener">
-                <img src="assets/site-vitrine-fiche-produit.png" alt="Fiche détail d'un produit avec ajout au panier et aux favoris" loading="lazy">
-              </a>
-              <a class="project__gallery-item" href="assets/site-vitrine-panier.png" target="_blank" rel="noopener">
-                <img src="assets/site-vitrine-panier.png" alt="Panier dynamique avec gestion des quantités" loading="lazy">
-              </a>
-            </div>
-            <p class="note">Fiche à compléter (période exacte, difficultés rencontrées).</p>
+            <h3 data-i18n="vitrine.title">site-vitrine-BTSIO — « Bad Kings »</h3>
+            <p class="project__summary" data-i18n="vitrine.lead">Le site vitrine et boutique d'une marque de streetwear fictive, « Bad Kings » : catalogue, fiche produit, panier, favoris et comptes, en PHP et PostgreSQL.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="vitrine.hl.0">Catalogue, fiche produit, panier avec quantités et favoris</li>
+              <li data-i18n="vitrine.hl.1">Base PostgreSQL de 5 tables, avec clés étrangères</li>
+              <li data-i18n="vitrine.hl.2">Un repository par table, requêtes préparées</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">PHP</span><span class="tag">PDO</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">HTML / CSS</span></div>
+            <a class="btn btn--ghost project__more" href="projets/site-vitrine.html" data-i18n="detail.more">Voir le projet en détail</a>
           </div>
         </article>
 
-        <!-- calorie-app -->
-        <article class="project reveal" id="projet-calorie">
-          <div class="project__media" aria-hidden="true">
-            <span>Capture à venir</span>
-          </div>
+        <article class="project reveal" id="projet-agent">
+          <a class="project__media" href="projets/agent-emploi.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/agent/01-offres.webp" alt="" loading="lazy">
+          </a>
           <div class="project__body">
             <div class="project__meta">
-              <span class="badge badge--perso">Projet personnel</span>
-              <span class="muted">Hors ligne — fonctionne en local</span>
+              <span class="badge badge--perso" data-i18n="badge.perso">Projet personnel</span>
+              <span class="muted" data-i18n="agent.date">Octobre 2026 · en cours</span>
             </div>
-            <h3>calorie-app</h3>
-            <p class="project__role">Contexte</p>
-            <p>Application personnelle de suivi alimentaire, développée en dehors du cadre scolaire pour explorer React et l'intégration d'une API externe.</p>
-            <div class="tags tags--tight">
-              <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Node.js</span>
+            <h3 data-i18n="agent.title">Agent de recherche d'emploi</h3>
+            <p class="project__summary" data-i18n="agent.lead">Un outil personnel qui va chercher tout seul des offres d'emploi sur plusieurs sources, supprime les doublons, donne à chaque offre un score de compatibilité avec mon profil et suit mes candidatures — le tout en local, sur mon poste.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="agent.hl.0">Recherche automatique sur plusieurs API d'offres</li>
+              <li data-i18n="agent.hl.1">Dédoublonnage en 3 niveaux et score transparent de 0 à 100</li>
+              <li data-i18n="agent.hl.2">78 tests automatisés avec pytest</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">pytest</span><span class="tag">RapidFuzz</span><span class="tag">API REST</span></div>
+            <a class="btn btn--ghost project__more" href="projets/agent-emploi.html" data-i18n="detail.more">Voir le projet en détail</a>
+          </div>
+        </article>
+
+        <article class="project reveal" id="projet-calorie">
+          <a class="project__media" href="projets/calorie-app.html" tabindex="-1" aria-hidden="true">
+            <span data-i18n="projects.captureSoon">Capture à venir</span>
+            <img class="project__cover" src="assets/projets/calorie/01-suivi.webp" alt="" loading="lazy">
+          </a>
+          <div class="project__body">
+            <div class="project__meta">
+              <span class="badge badge--perso" data-i18n="badge.perso">Projet personnel</span>
+              <span class="muted" data-i18n="calorie.date">Hors ligne — fonctionne en local</span>
             </div>
-            <p class="note">Fiche à compléter (fonctionnalités précises, captures).</p>
+            <h3 data-i18n="calorie.title">calorie-app</h3>
+            <p class="project__summary" data-i18n="calorie.lead">Une application personnelle de suivi alimentaire, développée en dehors du cadre scolaire pour découvrir React et l'intégration d'une API externe.</p>
+            <ul class="check-list project__highlights">
+              <li data-i18n="calorie.hl.0">Suivi des repas de la journée</li>
+              <li data-i18n="calorie.hl.1">Recherche d'aliments via une API externe</li>
+              <li data-i18n="calorie.hl.2">Découverte de React et Vite</li>
+            </ul>
+            <div class="tags tags--tight"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Node.js</span></div>
+            <a class="btn btn--ghost project__more" href="projets/calorie-app.html" data-i18n="detail.more">Voir le projet en détail</a>
           </div>
         </article>
 
@@ -379,8 +506,8 @@
   <!-- PARCOURS E5 -->
   <section id="parcours-e5" class="section">
     <div class="container">
-      <h2 class="section__title reveal">Parcours professionnel — synthèse E5</h2>
-      <p class="section__intro reveal">
+      <h2 class="section__title reveal" data-i18n="e5.title">Parcours professionnel — synthèse E5</h2>
+      <p class="section__intro reveal" data-i18n="e5.intro">
         Tableau de synthèse reliant chaque réalisation aux compétences du référentiel BTS SIO
         réellement mobilisées, et aux preuves disponibles.
       </p>
@@ -389,42 +516,67 @@
         <table class="e5-table">
           <thead>
             <tr>
-              <th scope="col">Réalisation</th>
-              <th scope="col">Compétences BTS mobilisées</th>
-              <th scope="col">Preuves disponibles</th>
+              <th scope="col" data-i18n="e5.th1">Réalisation</th>
+              <th scope="col" data-i18n="e5.th2">Compétences BTS mobilisées</th>
+              <th scope="col" data-i18n="e5.th3">Preuves disponibles</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Gestion des photos produits (Chazal)</th>
-              <td>Répondre aux incidents et demandes d'assistance et d'évolution · Mettre à disposition des utilisateurs un service informatique · Travailler en mode projet</td>
-              <td>Rapport de projet interne, captures d'écran (à venir), démonstration possible en soutenance</td>
+              <th scope="row" data-i18n="e5.row1.realisation">Gestion des photos produits (Chazal)</th>
+              <td data-i18n="e5.row1.competences">Répondre aux incidents et demandes d'assistance et d'évolution · Mettre à disposition des utilisateurs un service informatique · Travailler en mode projet</td>
+              <td data-i18n="e5.row1.preuves">Rapport de projet interne, historique Git (plus de 80 commits), captures d'écran, vidéo de démonstration, démonstration possible en soutenance</td>
             </tr>
             <tr>
-              <th scope="row">Système de catalogue produit (Chazal)</th>
-              <td>Développer la présence en ligne de l'organisation · Mettre à disposition des utilisateurs un service informatique</td>
-              <td>Explications fonctionnelles, captures (à venir) — code non communicable</td>
+              <th scope="row" data-i18n="e5.row10.realisation">Synchronisation des photos vers la GED (Chazal)</th>
+              <td data-i18n="e5.row6.competences">Répondre aux incidents et demandes d'assistance et d'évolution · Mettre à disposition des utilisateurs un service informatique</td>
+              <td data-i18n="e5.row10.preuves">Journal d'exécution, registre des envois (Excel), démonstration possible en soutenance — code non communicable</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="e5.row2.realisation">Système de catalogue produit (Chazal)</th>
+              <td data-i18n="e5.row2.competences">Développer la présence en ligne de l'organisation · Répondre aux incidents et demandes d'assistance et d'évolution · Mettre à disposition des utilisateurs un service informatique</td>
+              <td data-i18n="e5.row2.preuves">Explications fonctionnelles, captures et vidéos de démonstration — code non communicable</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="e5.row6.realisation">Application myChazal (Chazal)</th>
+              <td data-i18n="e5.row6.competences">Répondre aux incidents et demandes d'assistance et d'évolution · Mettre à disposition des utilisateurs un service informatique</td>
+              <td data-i18n="e5.row6.preuves">Explications fonctionnelles, captures — code non communicable</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="e5.row8.realisation">Application Les Halles (Chazal)</th>
+              <td data-i18n="e5.row8.competences">Mettre à disposition des utilisateurs un service informatique · Répondre aux incidents et demandes d'assistance et d'évolution</td>
+              <td data-i18n="e5.row8.preuves">Captures et vidéo de l'application, démonstration possible en soutenance</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="e5.row9.realisation">CRM ChazalGo (Chazal)</th>
+              <td data-i18n="e5.row6.competences">Répondre aux incidents et demandes d'assistance et d'évolution · Mettre à disposition des utilisateurs un service informatique</td>
+              <td data-i18n="e5.row9.preuves">Explications fonctionnelles, captures (données floutées), démonstration possible en soutenance — code non communicable</td>
             </tr>
             <tr>
               <th scope="row">CinéSIO</th>
-              <td>Mettre à disposition des utilisateurs un service informatique</td>
-              <td>Code source GitHub, captures (à venir)</td>
+              <td data-i18n="e5.row3.competences">Mettre à disposition des utilisateurs un service informatique</td>
+              <td data-i18n="e5.rowGithub.preuves">Code source GitHub, captures (à venir)</td>
             </tr>
             <tr>
               <th scope="row">site-vitrine-BTSIO</th>
-              <td>Mettre à disposition des utilisateurs un service informatique</td>
-              <td>Code source GitHub, captures (à venir)</td>
+              <td data-i18n="e5.row3.competences">Mettre à disposition des utilisateurs un service informatique</td>
+              <td data-i18n="e5.rowGithub.preuves">Code source GitHub, captures (à venir)</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="e5.row7.realisation">Agent de recherche d'emploi</th>
+              <td data-i18n="e5.row5.competences">Organiser son développement professionnel</td>
+              <td data-i18n="e5.row7.preuves">Code source local, tests automatisés, captures (à venir)</td>
             </tr>
             <tr>
               <th scope="row">calorie-app</th>
-              <td>Organiser son développement professionnel</td>
-              <td>Code source local, captures (à venir)</td>
+              <td data-i18n="e5.row5.competences">Organiser son développement professionnel</td>
+              <td data-i18n="e5.row5.preuves">Code source local, captures (à venir)</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p class="note reveal">
+      <p class="note reveal" data-i18n="e5.note">
         Seules les compétences réellement démontrées par le contenu de chaque réalisation sont
         indiquées ici — aucune n'est ajoutée par simple supposition.
       </p>
@@ -434,14 +586,14 @@
   <!-- VEILLE / CERTIFICATIONS -->
   <section id="veille" class="section section--muted">
     <div class="container">
-      <h2 class="section__title reveal">Certifications</h2>
+      <h2 class="section__title reveal" data-i18n="certif.title">Certifications</h2>
       <ul class="check-list reveal">
-        <li><a href="assets/Salim%20JABALLAH%20-%20SIO1%20-%20ATTESTATION%20MOOC%20EBIOS.pdf" download>Attestation MOOC EBIOS</a></li>
-        <li><a href="assets/Salim%20JABALLAH%20-%20SIO1%20-%20ATTESTATION%20MOOC%20CYBERINI.pdf" download>Attestation MOOC Cyberini</a></li>
-        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_module_1.pdf" download>Attestation — module 1</a></li>
-        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_module_3.pdf" download>Attestation — module 3</a></li>
-        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_module_5.pdf" download>Attestation — module 5</a></li>
-        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_ANSII_.pdf" download>Attestation ANSSI</a></li>
+        <li><a href="assets/Salim%20JABALLAH%20-%20SIO1%20-%20ATTESTATION%20MOOC%20EBIOS.pdf" download data-i18n="certif.1">Attestation MOOC EBIOS</a></li>
+        <li><a href="assets/Salim%20JABALLAH%20-%20SIO1%20-%20ATTESTATION%20MOOC%20CYBERINI.pdf" download data-i18n="certif.2">Attestation MOOC Cyberini</a></li>
+        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_module_1.pdf" download data-i18n="certif.3">Attestation — module 1</a></li>
+        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_module_3.pdf" download data-i18n="certif.4">Attestation — module 3</a></li>
+        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_module_5.pdf" download data-i18n="certif.5">Attestation — module 5</a></li>
+        <li><a href="assets/JABALLAH_Salim_SIO1_attestation_ANSII_.pdf" download data-i18n="certif.6">Attestation ANSSI</a></li>
       </ul>
     </div>
   </section>
@@ -449,12 +601,12 @@
   <!-- CONTACT -->
   <section id="contact" class="section section--contact">
     <div class="container">
-      <h2 class="section__title reveal">Contact</h2>
-      <p class="section__intro reveal">N'hésitez pas à me contacter pour toute question sur mon parcours ou mes projets.</p>
+      <h2 class="section__title reveal" data-i18n="contact.title">Contact</h2>
+      <p class="section__intro reveal" data-i18n="contact.intro">N'hésitez pas à me contacter pour toute question sur mon parcours ou mes projets.</p>
 
       <div class="contact-links reveal">
-        <a href="mailto:sjaballah@maisonchazal.com" class="contact-link">
-          sjaballah@maisonchazal.com
+        <a href="mailto:salim.jaballah1@gmail.com" class="contact-link">
+          salim.jaballah1@gmail.com
         </a>
         <a href="https://github.com/salimjaballah1-oss" class="contact-link" target="_blank" rel="noopener">
           github.com/salimjaballah1-oss
@@ -467,10 +619,32 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>Salim Jaballah — BTS SIO, option SLAM · <span id="year"></span></p>
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
   </div>
 </footer>
 
+<!-- Lightbox partagée : ouverte par n'importe quel .project__thumbs de la page -->
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="projets/i18n-projets.js"></script>
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

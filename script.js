@@ -107,10 +107,9 @@
     });
   }
 
-  /* ---------- Lien de nav actif selon la section visible ---------- */
-  function initActiveNav() {
-    var sections = document.querySelectorAll("main section[id]");
-    var links = document.querySelectorAll(".site-nav a[href^='#']");
+  /* ---------- Lien actif selon la section visible ----------
+     Sert au menu de l'accueil et au sommaire des pages projet. */
+  function watchSections(sections, links) {
     if (!sections.length || !links.length || !("IntersectionObserver" in window)) {
       return;
     }
@@ -141,10 +140,230 @@
     });
   }
 
+  function initActiveNav() {
+    watchSections(
+      document.querySelectorAll("main section[id]"),
+      document.querySelectorAll(".site-nav a[href^='#']")
+    );
+    watchSections(
+      document.querySelectorAll(".detail-section[id]"),
+      document.querySelectorAll(".detail-toc a[href^='#']")
+    );
+  }
+
   /* ---------- Année dans le footer ---------- */
   function initYear() {
     var el = document.getElementById("year");
     if (el) el.textContent = new Date().getFullYear();
+  }
+
+  /* ---------- Emplacements de captures ----------
+     Chaque vignette pointe vers un fichier attendu (assets/projets/...).
+     Tant que ce fichier n'existe pas, la vignette est retirée : le site
+     reste propre en ligne. Avec ?captures dans l'URL, les emplacements
+     manquants restent visibles avec le nom du fichier à déposer. Sur une
+     page projet, la première capture disponible devient l'image principale ;
+     sur l'accueil, chaque carte a sa propre image (.project__cover). */
+  function whenSettled(img, callback) {
+    if (img.complete && img.getAttribute("src")) {
+      callback(img.naturalWidth > 0);
+      return;
+    }
+    img.addEventListener("load", function () { callback(true); });
+    img.addEventListener("error", function () { callback(false); });
+  }
+
+  function initShots() {
+    var showSlots = /[?&]captures/.test(window.location.search);
+
+    document.querySelectorAll(".project__cover").forEach(function (img) {
+      whenSettled(img, function (ok) {
+        if (!ok) {
+          img.remove();
+          return;
+        }
+        var media = img.closest(".project__media");
+        var placeholder = media.querySelector("span");
+        if (placeholder) placeholder.remove();
+        img.classList.add("is-loaded");
+        media.classList.add("project__media--shot");
+      });
+    });
+
+    document.querySelectorAll(".project__thumbs").forEach(function (group) {
+      var thumbs = group.querySelectorAll(".project__thumb");
+      var scope = group.closest(".project, .detail") || document;
+      var pending = thumbs.length;
+
+      function finish() {
+        var hasShots = !!group.querySelector(".project__thumb");
+        if (!hasShots) group.hidden = true;
+        var empty = scope.querySelector(".gallery__empty");
+        if (empty) empty.hidden = hasShots;
+        // Page projet sans aucune capture : pas de grand bloc « à venir » en tête
+        var coverBlock = scope.querySelector(".detail-cover");
+        if (coverBlock && !hasShots && !showSlots) coverBlock.hidden = true;
+
+        var media = scope.querySelector(".project__media");
+        var first = group.querySelector(".project__thumb.is-loaded img");
+        if (!media || !first || media.querySelector("img")) return;
+        var cover = document.createElement("img");
+        cover.src = first.src;
+        cover.alt = "";
+        media.innerHTML = "";
+        media.appendChild(cover);
+        media.classList.add("project__media--shot");
+        // Clic sur l'image principale = ouvre la galerie sur la première capture
+        // (la vignette reste le point d'entrée clavier, l'image étant décorative).
+        media.addEventListener("click", function () {
+          first.closest(".project__thumb").click();
+        });
+      }
+
+      if (!pending) finish();
+
+      thumbs.forEach(function (btn) {
+        var img = btn.querySelector("img");
+        whenSettled(img, function (ok) {
+          if (ok) {
+            btn.classList.add("is-loaded");
+          } else if (showSlots) {
+            var label = document.createElement("span");
+            label.className = "project__thumb-slot";
+            label.textContent = img.getAttribute("alt") + " — " + img.getAttribute("src");
+            btn.classList.add("project__thumb--missing");
+            btn.disabled = true;
+            btn.appendChild(label);
+          } else {
+            btn.remove();
+          }
+          pending--;
+          if (!pending) finish();
+        });
+      });
+    });
+  }
+
+  /* ---------- Lightbox (aperçu des captures projets) ----------
+     Une seule lightbox partagée : n'importe quel groupe .project__thumbs
+     de la page peut l'ouvrir, avec navigation (flèches, points, tactile,
+     clavier) entre toutes les vignettes de son groupe. Fermeture par la
+     croix, un clic hors de l'image, ou Échap — le focus revient ensuite
+     sur la vignette cliquée pour ne pas perdre le clavier utilisateur. */
+  function initLightbox() {
+    var lightbox = document.getElementById("lightbox");
+    var groups = document.querySelectorAll(".project__thumbs");
+    if (!lightbox || !groups.length) return;
+
+    var imgEl = lightbox.querySelector(".lightbox__img");
+    var dotsWrap = lightbox.querySelector(".lightbox__dots");
+    var statusEl = lightbox.querySelector(".lightbox__status");
+    var captionEl = lightbox.querySelector(".lightbox__caption");
+    var prevBtn = lightbox.querySelector(".lightbox__nav--prev");
+    var nextBtn = lightbox.querySelector(".lightbox__nav--next");
+    var closeBtn = lightbox.querySelector(".lightbox__close");
+    var closeEls = lightbox.querySelectorAll("[data-lightbox-close]");
+
+    var images = [];
+    var index = 0;
+    var lastFocused = null;
+
+    function renderDots() {
+      dotsWrap.innerHTML = "";
+      images.forEach(function (_, i) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "lightbox__dot";
+        dot.setAttribute("aria-label", "Image " + (i + 1) + " / " + images.length);
+        dot.addEventListener("click", function () {
+          show(i);
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function show(i) {
+      index = (i + images.length) % images.length;
+      var item = images[index];
+      imgEl.src = item.src;
+      imgEl.alt = item.alt;
+      if (captionEl) captionEl.textContent = item.alt;
+
+      Array.prototype.forEach.call(dotsWrap.children, function (dot, di) {
+        var active = di === index;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-current", active ? "true" : "false");
+      });
+
+      if (statusEl) {
+        var isEn = document.documentElement.getAttribute("lang") === "en";
+        statusEl.textContent = isEn
+          ? "Image " + (index + 1) + " of " + images.length
+          : "Image " + (index + 1) + " sur " + images.length;
+      }
+    }
+
+    function onKeydown(event) {
+      if (event.key === "Escape") {
+        close();
+      } else if (event.key === "ArrowLeft") {
+        show(index - 1);
+      } else if (event.key === "ArrowRight") {
+        show(index + 1);
+      }
+    }
+
+    function open(list, startIndex, trigger) {
+      images = list;
+      lastFocused = trigger || document.activeElement;
+      renderDots();
+      show(startIndex);
+      lightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+      document.addEventListener("keydown", onKeydown);
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      document.body.classList.remove("lightbox-open");
+      document.removeEventListener("keydown", onKeydown);
+      if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+    }
+
+    closeEls.forEach(function (el) {
+      el.addEventListener("click", close);
+    });
+    if (prevBtn) prevBtn.addEventListener("click", function () { show(index - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { show(index + 1); });
+
+    // Balayage tactile basique sur l'image affichée.
+    var touchStartX = null;
+    imgEl.addEventListener("touchstart", function (event) {
+      touchStartX = event.touches[0].clientX;
+    }, { passive: true });
+    imgEl.addEventListener("touchend", function (event) {
+      if (touchStartX === null) return;
+      var delta = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 40) show(delta < 0 ? index + 1 : index - 1);
+      touchStartX = null;
+    });
+
+    groups.forEach(function (group) {
+      group.addEventListener("click", function (event) {
+        var btn = event.target.closest(".project__thumb.is-loaded");
+        if (!btn) return;
+        // Relit les vignettes et src/alt au moment du clic : seules les
+        // captures réellement présentes comptent, et l'alt suit la langue
+        // active (l'i18n a pu le changer depuis le chargement de la page).
+        var thumbs = Array.prototype.slice.call(group.querySelectorAll(".project__thumb.is-loaded"));
+        var list = thumbs.map(function (b) {
+          var img = b.querySelector("img");
+          return { src: img.src, alt: img.alt };
+        });
+        open(list, thumbs.indexOf(btn), btn);
+      });
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -153,5 +372,7 @@
     initScrollReveal();
     initActiveNav();
     initYear();
+    initShots();
+    initLightbox();
   });
 })();

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="photos.pageTitle">Gestion et enrichissement des photos produits — Salim Jaballah</title>
+<meta name="description" content="Une application web interne qui permet au service marketing de retrouver n'importe quel produit, de voir l'état de ses photos et d'en ajouter de nouvelles — au bon format, en version web et HD, éventuellement retouchées par IA.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gestion et enrichissement des photos produits — Salim Jaballah">
+<meta property="og:description" content="Une application web interne qui permet au service marketing de retrouver n'importe quel produit, de voir l'état de ses photos et d'en ajouter de nouvelles — au bon format, en version web et HD, éventuellement retouchées par IA.">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Page générée : le français est ici, l'anglais dans projets/i18n-projets.js -->
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="../index.html#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="../index.html#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="../index.html#projets" aria-current="true" data-i18n="nav.projects">Projets</a>
+      <a href="../index.html#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="../index.html#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="detail">
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets" data-i18n="detail.back">← Tous les projets</a>
+      <div class="project__meta">
+        <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+        <span class="muted" data-i18n="photos.date">Février → octobre 2026 · en production</span>
+      </div>
+      <h1 class="detail-hero__title" data-i18n="photos.title">Gestion et enrichissement des photos produits</h1>
+      <p class="detail-hero__lead" data-i18n="photos.lead">Une application web interne qui permet au service marketing de retrouver n'importe quel produit, de voir l'état de ses photos et d'en ajouter de nouvelles — au bon format, en version web et HD, éventuellement retouchées par IA.</p>
+      <dl class="facts">
+          <div><dt data-i18n="fact.period">Période</dt><dd><span data-i18n="photos.fact.period">Février → octobre 2026</span></dd></div>
+          <div><dt data-i18n="fact.role">Mon rôle</dt><dd><span data-i18n="photos.fact.role">Conception et développement, seul</span></dd></div>
+          <div><dt data-i18n="fact.users">Utilisateurs</dt><dd><span data-i18n="photos.fact.users">Service marketing</span></dd></div>
+          <div><dt data-i18n="fact.status">Statut</dt><dd><span data-i18n="photos.fact.status">En production sur l'intranet</span></dd></div>
+      </dl>
+      <div class="tags tags--tight"><span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">sharp</span><span class="tag">Amazon S3</span><span class="tag">OpenRouter</span><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Coolify</span></div>
+    </div>
+  </section>
+
+  <div class="container detail-cover">
+    <div class="project__media" aria-hidden="true">
+      <span data-i18n="projects.captureSoon">Capture à venir</span>
+    </div>
+  </div>
+
+  <div class="container detail-layout">
+    <aside class="detail-toc">
+      <nav aria-labelledby="tocTitle">
+        <p class="detail-toc__title" id="tocTitle" data-i18n="detail.toc">Sommaire</p>
+        <ol>
+            <li><a href="#contexte" data-i18n="photos.contexte.title">Contexte</a></li>
+            <li><a href="#fonctionnalites" data-i18n="photos.fonctionnalites.title">Fonctionnalités</a></li>
+            <li><a href="#fonctionnement" data-i18n="photos.fonctionnement.title">Comment une photo est traitée</a></li>
+            <li><a href="#architecture" data-i18n="photos.architecture.title">Architecture & déploiement</a></li>
+            <li><a href="#difficultes" data-i18n="photos.difficultes.title">Difficultés rencontrées</a></li>
+            <li><a href="#evolution" data-i18n="photos.evolution.title">Évolution du projet</a></li>
+            <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
+            <li><a href="#video" data-i18n="detail.video">Démonstration vidéo</a></li>
+            <li><a href="#captures" data-i18n="detail.shots">Captures d'écran</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="detail-content">
+      <section class="detail-section" id="contexte">
+        <h2 data-i18n="photos.contexte.title">Contexte</h2>
+        <p data-i18n="photos.contexte.0">De nombreux produits de l'enseigne « Les Halles by Chazal » n'avaient pas encore de photo sur le site. Ajouter une image demandait plusieurs manipulations manuelles, réparties entre différents emplacements de fichiers, sans moyen simple de savoir quels produits en manquaient.</p>
+        <p data-i18n="photos.contexte.1">L'objectif : un seul outil, branché sur l'API d'administration du site e-commerce, pour contrôler et compléter les photos sans passer par le back-office.</p>
+      </section>
+
+      <section class="detail-section" id="fonctionnalites">
+        <h2 data-i18n="photos.fonctionnalites.title">Fonctionnalités</h2>
+        <ul class="check-list">
+          <li data-i18n="photos.fonctionnalites.0.0"><strong>Recherche</strong> par code, libellé ou fournisseur, recherche de plusieurs codes à la fois, filtres catégorie et sous-catégorie, pagination.</li>
+          <li data-i18n="photos.fonctionnalites.0.1"><strong>Articles récents</strong> : les produits créés sur les 7, 30 ou 90 derniers jours, pour traiter les nouveautés en priorité.</li>
+          <li data-i18n="photos.fonctionnalites.0.2"><strong>Import en masse</strong> : on glisse des dizaines de fichiers, le code produit est lu dans le nom de chaque fichier, puis l'utilisateur valide avant l'envoi.</li>
+          <li data-i18n="photos.fonctionnalites.0.3"><strong>Photos web et HD</strong> : la version web est mise au format du site, l'original HD est conservé sur Amazon S3.</li>
+          <li data-i18n="photos.fonctionnalites.0.4"><strong>IA générative</strong> : génération d'un visuel à partir du libellé, détourage sur fond blanc, changement de fond (10 fonds prêts ou un fond personnalisé), retouche libre par prompt, amélioration de la netteté.</li>
+          <li data-i18n="photos.fonctionnalites.0.5"><strong>Images d'ambiance</strong> : une même mise en scène rattachée à plusieurs produits.</li>
+          <li data-i18n="photos.fonctionnalites.0.6"><strong>Ma liste et historique</strong> : une liste de travail exportable dans Excel, et l'historique des dernières actions sur les images.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="fonctionnement">
+        <h2 data-i18n="photos.fonctionnement.title">Comment une photo est traitée</h2>
+        <ol class="steps">
+          <li><strong data-i18n="photos.fonctionnement.0.0.t">Dépôt</strong><p data-i18n="photos.fonctionnement.0.0.d">L'utilisateur dépose une ou plusieurs images ; le code produit est détecté dans le nom du fichier.</p></li>
+          <li><strong data-i18n="photos.fonctionnement.0.1.t">Original HD vers S3</strong><p data-i18n="photos.fonctionnement.0.1.d">Le fichier original part tel quel sur Amazon S3 via un micro-service Node.js — ce qui contourne la limite de taille de l'API d'administration.</p></li>
+          <li><strong data-i18n="photos.fonctionnement.0.2.t">Mise au format web</strong><p data-i18n="photos.fonctionnement.0.2.d">L'image est centrée sur un fond blanc de taille fixe (1024×768, 1280×1024 ou 1600×1200 selon la source), avec une marge, puis compressée en JPEG.</p></li>
+          <li><strong data-i18n="photos.fonctionnement.0.3.t">Envoi au site</strong><p data-i18n="photos.fonctionnement.0.3.d">La version web est envoyée à l'API du site, et une copie est gardée sur S3.</p></li>
+          <li><strong data-i18n="photos.fonctionnement.0.4.t">Vérification</strong><p data-i18n="photos.fonctionnement.0.4.d">L'outil vérifie que l'URL renvoyée est réellement accessible avant d'annoncer la réussite.</p></li>
+          <li><strong data-i18n="photos.fonctionnement.0.5.t">Vers l'ERP</strong><p data-i18n="photos.fonctionnement.0.5.d">Chaque jour, un script Python copie les nouvelles photos web vers la GED de l'ERP (voir le projet dédié).</p></li>
+        </ol>
+      </section>
+
+      <section class="detail-section" id="architecture">
+        <h2 data-i18n="photos.architecture.title">Architecture & déploiement</h2>
+        <p data-i18n="photos.architecture.0">L'interface est en Vue 3 (Vite). Un micro-service Node.js (Express, Multer, sharp, AWS SDK) gère tout ce qui touche à S3 et aux fichiers lourds. L'ensemble tient dans une seule image Docker multi-étapes : Nginx sert l'interface et fait office de proxy vers l'API et le micro-service, ce qui règle aussi les problèmes de CORS. Le tout est déployé sur l'intranet avec Coolify.</p>
+        <p data-i18n="photos.architecture.1">Côté sécurité, les appels sensibles passent par le serveur : le navigateur ne reçoit qu'un jeton de session temporaire, et les clés d'API (IA, compte technique) restent côté serveur, dans des variables d'environnement. Le micro-service n'accepte que les dossiers et les hôtes prévus.</p>
+      </section>
+
+      <section class="detail-section" id="difficultes">
+        <h2 data-i18n="photos.difficultes.title">Difficultés rencontrées</h2>
+        <div class="challenges">
+          <div class="challenge">
+            <h3 data-i18n="photos.difficultes.0.0.t">Limite de requêtes de l'API</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="photos.difficultes.0.0.p">Les recherches de nombreux codes ou sous-catégories déclenchaient des erreurs 429 (trop de requêtes).</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="photos.difficultes.0.0.s">Appels espacés et séquentiels, nouvelles tentatives avec une attente qui double, verrou pour éviter deux connexions simultanées.</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="photos.difficultes.0.1.t">Fichiers trop lourds</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="photos.difficultes.0.1.p">L'API d'administration refusait les photos HD (erreur 413).</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="photos.difficultes.0.1.s">Ajout d'un micro-service Node.js qui envoie les originaux directement sur Amazon S3.</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="photos.difficultes.0.2.t">Images envoyées mais introuvables</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="photos.difficultes.0.2.p">Environ 270 images avaient été envoyées avec des URL cassées, sans aucune erreur visible.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="photos.difficultes.0.2.s">Journalisation des échecs et vérification systématique de chaque URL après l'envoi.</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="photos.difficultes.0.3.t">Accents mal encodés</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="photos.difficultes.0.3.p">Certains libellés arrivaient avec des caractères doublement mal encodés.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="photos.difficultes.0.3.s">Correction automatique de l'encodage à l'affichage.</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-section" id="evolution">
+        <h2 data-i18n="photos.evolution.title">Évolution du projet</h2>
+        <ol class="timeline">
+          <li><span class="timeline__period" data-i18n="photos.evolution.0.0.t">Février – mars 2026</span><p data-i18n="photos.evolution.0.0.d">Première version : recherche, catégories, pagination, liste de travail et import Excel.</p></li>
+          <li><span class="timeline__period" data-i18n="photos.evolution.0.1.t">Mai 2026</span><p data-i18n="photos.evolution.0.1.d">Mise en production : Docker, Coolify, proxy Nginx, gestion des erreurs 429.</p></li>
+          <li><span class="timeline__period" data-i18n="photos.evolution.0.2.t">Juin – juillet 2026</span><p data-i18n="photos.evolution.0.2.d">Recherche multi-codes et fonctions d'IA générative (fonds, fond blanc, compression).</p></li>
+          <li><span class="timeline__period" data-i18n="photos.evolution.0.3.t">Août – septembre 2026</span><p data-i18n="photos.evolution.0.3.d">Micro-service S3 pour les photos HD, fusion dans un seul conteneur, journal des échecs et vérification des URL.</p></li>
+          <li><span class="timeline__period" data-i18n="photos.evolution.0.4.t">Octobre 2026</span><p data-i18n="photos.evolution.0.4.d">Format web standard, refonte visuelle, images d'ambiance, lien direct vers l'outil de catalogue (même menu latéral dans les deux applications) et sécurisation des clés d'API côté serveur.</p></li>
+        </ol>
+        <div class="stats">
+          <div class="stat"><span class="stat__value">84</span><span class="stat__label" data-i18n="photos.evolution.1.0">commits, de février à octobre 2026</span></div>
+          <div class="stat"><span class="stat__value">4</span><span class="stat__label" data-i18n="photos.evolution.1.1">modèles d'IA proposés</span></div>
+          <div class="stat"><span class="stat__value">1</span><span class="stat__label" data-i18n="photos.evolution.1.2">seul conteneur Docker à déployer</span></div>
+        </div>
+      </section>
+
+      <section class="detail-section" id="competences">
+        <h2 data-i18n="detail.skills">Compétences BTS SIO mobilisées</h2>
+        <ul class="check-list">
+          <li data-i18n="photos.competences.0.0">Répondre aux incidents et aux demandes d'assistance et d'évolution</li>
+          <li data-i18n="photos.competences.0.1">Mettre à disposition des utilisateurs un service informatique</li>
+          <li data-i18n="photos.competences.0.2">Travailler en mode projet</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="video">
+        <h2 data-i18n="detail.video">Démonstration vidéo</h2>
+        <div class="demo-videos">
+          <figure class="demo-video">
+            <video controls muted playsinline preload="none" poster="../assets/projets/photos/demo-interface.webp" src="../assets/projets/photos/demo-interface.mp4"></video>
+            <figcaption data-i18n="photos.video.0">Démonstration : recherche de produits, génération d'un visuel par IA, recadrage et envoi de la photo, puis ma liste de travail.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="detail-section" id="captures">
+        <h2 data-i18n="detail.shots">Captures d'écran</h2>
+        <p class="gallery__empty" data-i18n="detail.shotsEmpty" hidden>Captures en cours de préparation.</p>
+        <div class="project__thumbs gallery">
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/01-recherche.webp" alt="Recherche : résultats avec l'état des photos (Web, Sans image), filtres et sélection des produits sans image" loading="lazy" data-i18n-alt="photos.shot.0">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/02-fiche-produit.webp" alt="Panneau d'un produit : photos web et miniatures" loading="lazy" data-i18n-alt="photos.shot.1">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/03-actions.webp" alt="Actions sur l'image : format web, génération IA, netteté, retouche par prompt, fond blanc" loading="lazy" data-i18n-alt="photos.shot.2">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/04-ia.webp" alt="Génération d'un visuel par IA : choix du modèle et libellé du produit" loading="lazy" data-i18n-alt="photos.shot.3">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/05-ambiance.webp" alt="Image d'ambiance : une même photo rattachée à plusieurs produits" loading="lazy" data-i18n-alt="photos.shot.4">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/06-ma-liste.webp" alt="Ma liste : produits à traiter, export Excel et redimensionnement en lot" loading="lazy" data-i18n-alt="photos.shot.5">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/07-historique.webp" alt="Historique des modifications d'images" loading="lazy" data-i18n-alt="photos.shot.6">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/photos/08-import-masse.webp" alt="Import en masse : association automatique des fichiers aux produits, avant validation" loading="lazy" data-i18n-alt="photos.shot.7">
+          </button>
+        </div>
+        <p class="note"><span data-i18n="photos.note">Projet interne — code non public. Détail complet disponible sur demande (rapport de projet).</span></p>
+      </section>
+    </div>
+  </div>
+
+  <nav class="container detail-pager" aria-label="Autres projets">
+      <a href="synchro-s3-ged.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="ged.title">Script de synchronisation des photos vers la GED</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="i18n-projets.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

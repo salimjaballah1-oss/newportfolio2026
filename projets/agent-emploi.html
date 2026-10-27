@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="agent.pageTitle">Agent de recherche d'emploi — Salim Jaballah</title>
+<meta name="description" content="Un outil personnel qui va chercher tout seul des offres d'emploi sur plusieurs sources, supprime les doublons, donne à chaque offre un score de compatibilité avec mon profil et suit mes candidatures — le tout en local, sur mon poste.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agent de recherche d'emploi — Salim Jaballah">
+<meta property="og:description" content="Un outil personnel qui va chercher tout seul des offres d'emploi sur plusieurs sources, supprime les doublons, donne à chaque offre un score de compatibilité avec mon profil et suit mes candidatures — le tout en local, sur mon poste.">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Page générée : le français est ici, l'anglais dans projets/i18n-projets.js -->
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="../index.html#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="../index.html#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="../index.html#projets" aria-current="true" data-i18n="nav.projects">Projets</a>
+      <a href="../index.html#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="../index.html#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="detail">
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets" data-i18n="detail.back">← Tous les projets</a>
+      <div class="project__meta">
+        <span class="badge badge--perso" data-i18n="badge.perso">Projet personnel</span>
+        <span class="muted" data-i18n="agent.date">Octobre 2026 · en cours</span>
+      </div>
+      <h1 class="detail-hero__title" data-i18n="agent.title">Agent de recherche d'emploi</h1>
+      <p class="detail-hero__lead" data-i18n="agent.lead">Un outil personnel qui va chercher tout seul des offres d'emploi sur plusieurs sources, supprime les doublons, donne à chaque offre un score de compatibilité avec mon profil et suit mes candidatures — le tout en local, sur mon poste.</p>
+      <dl class="facts">
+          <div><dt data-i18n="fact.period">Période</dt><dd><span data-i18n="agent.fact.period">Octobre 2026</span></dd></div>
+          <div><dt data-i18n="fact.role">Mon rôle</dt><dd><span data-i18n="agent.fact.role">Conception et développement</span></dd></div>
+          <div><dt data-i18n="fact.team">Équipe</dt><dd><span data-i18n="agent.fact.team">Seul</span></dd></div>
+          <div><dt data-i18n="fact.status">Statut</dt><dd><span data-i18n="agent.fact.status">Étape 2 sur 5</span></dd></div>
+      </dl>
+      <div class="tags tags--tight"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">pytest</span><span class="tag">RapidFuzz</span><span class="tag">API REST</span></div>
+    </div>
+  </section>
+
+  <div class="container detail-cover">
+    <div class="project__media" aria-hidden="true">
+      <span data-i18n="projects.captureSoon">Capture à venir</span>
+    </div>
+  </div>
+
+  <div class="container detail-layout">
+    <aside class="detail-toc">
+      <nav aria-labelledby="tocTitle">
+        <p class="detail-toc__title" id="tocTitle" data-i18n="detail.toc">Sommaire</p>
+        <ol>
+            <li><a href="#contexte" data-i18n="agent.contexte.title">Contexte</a></li>
+            <li><a href="#fonctionnement" data-i18n="agent.fonctionnement.title">Fonctionnement</a></li>
+            <li><a href="#securite" data-i18n="agent.securite.title">Sécurité & qualité</a></li>
+            <li><a href="#suite" data-i18n="agent.suite.title">Prochaines étapes</a></li>
+            <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
+            <li><a href="#captures" data-i18n="detail.shots">Captures d'écran</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="detail-content">
+      <section class="detail-section" id="contexte">
+        <h2 data-i18n="agent.contexte.title">Contexte</h2>
+        <p data-i18n="agent.contexte.0">Chercher un emploi dans plusieurs pays oblige à surveiller beaucoup de sites, à retrouver les mêmes offres plusieurs fois et à suivre ses candidatures à la main. J'ai voulu un outil qui fasse ce travail et m'aide à me concentrer sur les offres qui me correspondent vraiment.</p>
+      </section>
+
+      <section class="detail-section" id="fonctionnement">
+        <h2 data-i18n="agent.fonctionnement.title">Fonctionnement</h2>
+        <ol class="steps">
+          <li><strong data-i18n="agent.fonctionnement.0.0.t">Collecte</strong><p data-i18n="agent.fonctionnement.0.0.d">Recherche sur 4 API d'offres testées (Himalayas, Remotive, Jobicy, Arbeitnow), 3 autres prêtes à activer avec une clé gratuite, plus l'import CSV/JSON. Une source en panne n'arrête pas les autres.</p></li>
+          <li><strong data-i18n="agent.fonctionnement.0.1.t">Normalisation</strong><p data-i18n="agent.fonctionnement.0.1.d">Pays, langue, salaire converti en euros, liens nettoyés ; les postes de direction et les offres « USA only » sont écartés.</p></li>
+          <li><strong data-i18n="agent.fonctionnement.0.2.t">Dédoublonnage</strong><p data-i18n="agent.fonctionnement.0.2.d">Une offre est un doublon si elle a le même lien, la même empreinte (titre + entreprise + pays), ou une similarité d'au moins 90 % sur l'entreprise et le titre (RapidFuzz). Le doublon n'est pas recréé : son lien s'ajoute à l'offre existante.</p></li>
+          <li><strong data-i18n="agent.fonctionnement.0.3.t">Score</strong><p data-i18n="agent.fonctionnement.0.3.d">Score de 0 à 100, sans IA : compétences 45 %, expérience 25 %, métier 20 %, langue 10 %, bonus pour un pays prioritaire. Le détail du calcul est affiché sur chaque offre.</p></li>
+          <li><strong data-i18n="agent.fonctionnement.0.4.t">Suivi</strong><p data-i18n="agent.fonctionnement.0.4.d">Tableau de bord Flask bilingue FR/EN : filtres, et suivi de chaque candidature (à postuler → postulé → relancé → entretien → offre ou refus) avec historique.</p></li>
+        </ol>
+        <p data-i18n="agent.fonctionnement.1">La recherche se relance toutes les 6 heures, ou via deux tâches du Planificateur de tâches Windows (9 h et 18 h).</p>
+      </section>
+
+      <section class="detail-section" id="securite">
+        <h2 data-i18n="agent.securite.title">Sécurité & qualité</h2>
+        <ul class="check-list">
+          <li data-i18n="agent.securite.0.0">Clés d'API dans un fichier <code>.env</code> exclu de Git ; elles n'apparaissent jamais dans les messages d'erreur.</li>
+          <li data-i18n="agent.securite.0.1">Jeton CSRF sur tous les formulaires.</li>
+          <li data-i18n="agent.securite.0.2">Serveur accessible uniquement depuis la machine locale.</li>
+          <li data-i18n="agent.securite.0.3">Aucun scraping des sites qui l'interdisent.</li>
+          <li data-i18n="agent.securite.0.4">78 tests automatisés avec pytest : sources, normalisation, doublons, score, filtres, base de données et interface web.</li>
+        </ul>
+        <div class="stats">
+          <div class="stat"><span class="stat__value">7</span><span class="stat__label" data-i18n="agent.securite.1.0">sources d'offres prévues</span></div>
+          <div class="stat"><span class="stat__value">78</span><span class="stat__label" data-i18n="agent.securite.1.1">tests automatisés</span></div>
+          <div class="stat"><span class="stat__value">~2 600</span><span class="stat__label" data-i18n="agent.securite.1.2">lignes de Python</span></div>
+        </div>
+      </section>
+
+      <section class="detail-section" id="suite">
+        <h2 data-i18n="agent.suite.title">Prochaines étapes</h2>
+        <p data-i18n="agent.suite.0">Lettres de motivation adaptées à chaque offre, aide à la candidature, export Excel et relances.</p>
+      </section>
+
+      <section class="detail-section" id="competences">
+        <h2 data-i18n="detail.skills">Compétences BTS SIO mobilisées</h2>
+        <ul class="check-list">
+          <li data-i18n="agent.competences.0.0">Organiser son développement professionnel</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="captures">
+        <h2 data-i18n="detail.shots">Captures d'écran</h2>
+        <p class="gallery__empty" data-i18n="detail.shotsEmpty" hidden>Captures en cours de préparation.</p>
+        <div class="project__thumbs gallery">
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/agent/01-offres.webp" alt="Liste des offres avec score de compatibilité et filtres" loading="lazy" data-i18n-alt="agent.shot.0">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/agent/02-detail-score.webp" alt="Détail d'une offre et du calcul de son score" loading="lazy" data-i18n-alt="agent.shot.1">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/agent/03-candidatures.webp" alt="Suivi des candidatures" loading="lazy" data-i18n-alt="agent.shot.2">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/agent/04-recherche-auto.webp" alt="État des sources de la recherche automatique" loading="lazy" data-i18n-alt="agent.shot.3">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/agent/05-tests.webp" alt="Exécution des tests automatisés avec pytest" loading="lazy" data-i18n-alt="agent.shot.4">
+          </button>
+        </div>
+        <p class="note"><span data-i18n="agent.note">Code source local.</span></p>
+      </section>
+    </div>
+  </div>
+
+  <nav class="container detail-pager" aria-label="Autres projets">
+      <a href="site-vitrine.html" class="detail-pager__prev"><span class="detail-pager__dir" data-i18n="detail.prev">Projet précédent</span><span class="detail-pager__name" data-i18n="vitrine.title">site-vitrine-BTSIO — « Bad Kings »</span></a>
+      <a href="calorie-app.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="calorie.title">calorie-app</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="i18n-projets.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

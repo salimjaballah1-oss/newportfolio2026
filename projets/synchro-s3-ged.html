@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="ged.pageTitle">Script de synchronisation des photos vers la GED — Salim Jaballah</title>
+<meta name="description" content="Un script Python qui recopie automatiquement les nouvelles photos web, déposées sur Amazon S3 par l'interface photos, dans la GED de l'ERP Infologic — avec le bon nom, sans doublon, et une trace de chaque envoi lisible dans Excel.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Script de synchronisation des photos vers la GED — Salim Jaballah">
+<meta property="og:description" content="Un script Python qui recopie automatiquement les nouvelles photos web, déposées sur Amazon S3 par l'interface photos, dans la GED de l'ERP Infologic — avec le bon nom, sans doublon, et une trace de chaque envoi lisible dans Excel.">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Page générée : le français est ici, l'anglais dans projets/i18n-projets.js -->
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="../index.html#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="../index.html#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="../index.html#projets" aria-current="true" data-i18n="nav.projects">Projets</a>
+      <a href="../index.html#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="../index.html#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="detail">
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets" data-i18n="detail.back">← Tous les projets</a>
+      <div class="project__meta">
+        <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+        <span class="muted" data-i18n="ged.date">Août → octobre 2026 · en service</span>
+      </div>
+      <h1 class="detail-hero__title" data-i18n="ged.title">Script de synchronisation des photos vers la GED</h1>
+      <p class="detail-hero__lead" data-i18n="ged.lead">Un script Python qui recopie automatiquement les nouvelles photos web, déposées sur Amazon S3 par l'interface photos, dans la GED de l'ERP Infologic — avec le bon nom, sans doublon, et une trace de chaque envoi lisible dans Excel.</p>
+      <dl class="facts">
+          <div><dt data-i18n="fact.period">Période</dt><dd><span data-i18n="ged.fact.period">Août → octobre 2026</span></dd></div>
+          <div><dt data-i18n="fact.role">Mon rôle</dt><dd><span data-i18n="ged.fact.role">Conception et développement, seul</span></dd></div>
+          <div><dt data-i18n="fact.context">Cadre</dt><dd><span data-i18n="ged.fact.context">Complément de l'interface photos</span></dd></div>
+          <div><dt data-i18n="fact.status">Statut</dt><dd><span data-i18n="ged.fact.status">Lancé sur un poste du réseau</span></dd></div>
+      </dl>
+      <div class="tags tags--tight"><span class="tag">Python</span><span class="tag">boto3</span><span class="tag">Amazon S3</span><span class="tag">python-dotenv</span><span class="tag">Planificateur de tâches Windows</span><span class="tag">CSV / Excel</span></div>
+    </div>
+  </section>
+
+  <div class="container detail-cover">
+    <div class="project__media" aria-hidden="true">
+      <span data-i18n="projects.captureSoon">Capture à venir</span>
+    </div>
+  </div>
+
+  <div class="container detail-layout">
+    <aside class="detail-toc">
+      <nav aria-labelledby="tocTitle">
+        <p class="detail-toc__title" id="tocTitle" data-i18n="detail.toc">Sommaire</p>
+        <ol>
+            <li><a href="#contexte" data-i18n="ged.contexte.title">Contexte</a></li>
+            <li><a href="#fonctionnement" data-i18n="ged.fonctionnement.title">Fonctionnement</a></li>
+            <li><a href="#robustesse" data-i18n="ged.robustesse.title">Robustesse</a></li>
+            <li><a href="#resultats" data-i18n="ged.resultats.title">Résultats</a></li>
+            <li><a href="#evolution" data-i18n="ged.evolution.title">Évolution du projet</a></li>
+            <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
+            <li><a href="#captures" data-i18n="detail.shots">Captures d'écran</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="detail-content">
+      <section class="detail-section" id="contexte">
+        <h2 data-i18n="ged.contexte.title">Contexte</h2>
+        <p data-i18n="ged.contexte.0">Les photos ajoutées avec l'interface photos arrivent sur le site et sur Amazon S3, mais l'ERP de l'entreprise (Infologic) a sa propre GED, un partage réseau où chaque produit doit avoir une image nommée <code>{code}.jpg</code>. Sans outil, il fallait recopier et renommer ces fichiers à la main.</p>
+      </section>
+
+      <section class="detail-section" id="fonctionnement">
+        <h2 data-i18n="ged.fonctionnement.title">Fonctionnement</h2>
+        <ol class="steps">
+          <li><strong data-i18n="ged.fonctionnement.0.0.t">Lister S3</strong><p data-i18n="ged.fonctionnement.0.0.d">Le script parcourt toutes les photos web du bucket, page par page.</p></li>
+          <li><strong data-i18n="ged.fonctionnement.0.1.t">Écarter ce qui est déjà fait</strong><p data-i18n="ged.fonctionnement.0.1.d">Un fichier d'état (<code>sync_state.json</code>) mémorise chaque photo déjà traitée.</p></li>
+          <li><strong data-i18n="ged.fonctionnement.0.2.t">Choisir la photo principale</strong><p data-i18n="ged.fonctionnement.0.2.d">Les photos sont regroupées par code produit. Si plusieurs sont arrivées, c'est la première du dernier lot envoyé qui part (un lot = des envois espacés de moins de 60 s).</p></li>
+          <li><strong data-i18n="ged.fonctionnement.0.3.t">Copier sans risque</strong><p data-i18n="ged.fonctionnement.0.3.d">Téléchargement dans un fichier temporaire, puis remplacement atomique : la GED n'a jamais de fichier à moitié écrit, et la dernière photo remplace l'ancienne sans créer de doublon.</p></li>
+          <li><strong data-i18n="ged.fonctionnement.0.4.t">Tracer</strong><p data-i18n="ged.fonctionnement.0.4.d">Chaque action est écrite dans un journal, et chaque copie réelle ajoute une ligne au registre <code>envois.csv</code>, qui s'ouvre directement dans Excel.</p></li>
+        </ol>
+        <h3 data-i18n="ged.fonctionnement.1">Options</h3>
+        <ul class="check-list">
+          <li data-i18n="ged.fonctionnement.2.0"><code>--dry-run</code> : simulation, montre ce qui serait copié sans rien écrire.</li>
+          <li data-i18n="ged.fonctionnement.2.1"><code>--forcer</code> : renvoie la dernière photo de tous les produits, pas seulement des nouveautés.</li>
+          <li data-i18n="ged.fonctionnement.2.2">Lancement par double-clic ou par le Planificateur de tâches Windows.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="robustesse">
+        <h2 data-i18n="ged.robustesse.title">Robustesse</h2>
+        <ul class="check-list">
+          <li data-i18n="ged.robustesse.0.0">Une erreur sur un fichier n'est pas mémorisée : il est simplement retenté au passage suivant.</li>
+          <li data-i18n="ged.robustesse.0.1">Partage réseau inaccessible ou S3 illisible : message clair avec les pistes à vérifier (réseau, VPN, droits).</li>
+          <li data-i18n="ged.robustesse.0.2">Si un fichier apparaît entre-temps dans la GED, la photo existante est conservée.</li>
+          <li data-i18n="ged.robustesse.0.3">Le script installé est placé hors de OneDrive, pour ne jamais synchroniser les clés AWS dans le cloud.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="resultats">
+        <h2 data-i18n="ged.resultats.title">Résultats</h2>
+        <div class="stats">
+          <div class="stat"><span class="stat__value">1 138</span><span class="stat__label" data-i18n="ged.resultats.0.0">photos web suivies sur S3</span></div>
+          <div class="stat"><span class="stat__value">809</span><span class="stat__label" data-i18n="ged.resultats.0.1">photos envoyées dans la GED</span></div>
+          <div class="stat"><span class="stat__value">~1 min</span><span class="stat__label" data-i18n="ged.resultats.0.2">pour traiter 276 nouvelles photos</span></div>
+          <div class="stat"><span class="stat__value">0</span><span class="stat__label" data-i18n="ged.resultats.0.3">erreur sur les envois réels</span></div>
+        </div>
+        <p data-i18n="ged.resultats.1">Chiffres relevés dans le journal du script au 27 octobre 2026.</p>
+      </section>
+
+      <section class="detail-section" id="evolution">
+        <h2 data-i18n="ged.evolution.title">Évolution du projet</h2>
+        <ol class="timeline">
+          <li><span class="timeline__period" data-i18n="ged.evolution.0.0.t">Août 2026</span><p data-i18n="ged.evolution.0.0.d">Premier script de synchronisation, dans le dépôt de l'interface photos.</p></li>
+          <li><span class="timeline__period" data-i18n="ged.evolution.0.1.t">Octobre 2026</span><p data-i18n="ged.evolution.0.1.d">Version quotidienne, registre des envois, règle « la dernière photo fait foi », puis envoi uniquement vers la GED avec la photo principale de chaque produit.</p></li>
+        </ol>
+      </section>
+
+      <section class="detail-section" id="competences">
+        <h2 data-i18n="detail.skills">Compétences BTS SIO mobilisées</h2>
+        <ul class="check-list">
+          <li data-i18n="ged.competences.0.0">Mettre à disposition des utilisateurs un service informatique</li>
+          <li data-i18n="ged.competences.0.1">Répondre aux incidents et aux demandes d'assistance et d'évolution</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="captures">
+        <h2 data-i18n="detail.shots">Captures d'écran</h2>
+        <p class="gallery__empty" data-i18n="detail.shotsEmpty" hidden>Captures en cours de préparation.</p>
+        <div class="project__thumbs gallery">
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/ged/01-terminal.webp" alt="Exécution du script : photos trouvées sur S3 et copies vers la GED" loading="lazy" data-i18n-alt="ged.shot.0">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/ged/02-registre-excel.webp" alt="Registre des envois (envois.csv) ouvert dans Excel" loading="lazy" data-i18n-alt="ged.shot.1">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/ged/03-dossier-ged.webp" alt="Dossier Photos de la GED, une image par code produit" loading="lazy" data-i18n-alt="ged.shot.2">
+          </button>
+        </div>
+        <p class="note"><span data-i18n="ged.note">Projet interne — code non public.</span></p>
+      </section>
+    </div>
+  </div>
+
+  <nav class="container detail-pager" aria-label="Autres projets">
+      <a href="photos-produits.html" class="detail-pager__prev"><span class="detail-pager__dir" data-i18n="detail.prev">Projet précédent</span><span class="detail-pager__name" data-i18n="photos.title">Gestion et enrichissement des photos produits</span></a>
+      <a href="catalogue.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="catalogue.title">Système de mise en ligne du catalogue produit</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="i18n-projets.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

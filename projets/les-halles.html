@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="leshalles.pageTitle">Application mobile « Les Halles by Chazal » — Salim Jaballah</title>
+<meta name="description" content="L'application mobile de l'enseigne « Les Halles by Chazal », utilisée par les magasins pour consulter les catalogues et passer commande. Je l'ai créée avec FlutterFlow, connectée à Firebase, et je la fais évoluer au fil des besoins.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Application mobile « Les Halles by Chazal » — Salim Jaballah">
+<meta property="og:description" content="L'application mobile de l'enseigne « Les Halles by Chazal », utilisée par les magasins pour consulter les catalogues et passer commande. Je l'ai créée avec FlutterFlow, connectée à Firebase, et je la fais évoluer au fil des besoins.">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Page générée : le français est ici, l'anglais dans projets/i18n-projets.js -->
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="../index.html#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="../index.html#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="../index.html#projets" aria-current="true" data-i18n="nav.projects">Projets</a>
+      <a href="../index.html#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="../index.html#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="detail">
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets" data-i18n="detail.back">← Tous les projets</a>
+      <div class="project__meta">
+        <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+        <span class="muted" data-i18n="leshalles.date">Création et évolutions</span>
+      </div>
+      <h1 class="detail-hero__title" data-i18n="leshalles.title">Application mobile « Les Halles by Chazal »</h1>
+      <p class="detail-hero__lead" data-i18n="leshalles.lead">L'application mobile de l'enseigne « Les Halles by Chazal », utilisée par les magasins pour consulter les catalogues et passer commande. Je l'ai créée avec FlutterFlow, connectée à Firebase, et je la fais évoluer au fil des besoins.</p>
+      <dl class="facts">
+          <div><dt data-i18n="fact.role">Mon rôle</dt><dd><span data-i18n="leshalles.fact.role">Création de l'application</span></dd></div>
+          <div><dt data-i18n="fact.users">Utilisateurs</dt><dd><span data-i18n="leshalles.fact.users">Magasins Les Halles (iOS / Android)</span></dd></div>
+          <div><dt data-i18n="fact.status">Statut</dt><dd><span data-i18n="leshalles.fact.status">En service, évolutions en continu</span></dd></div>
+      </dl>
+      <div class="tags tags--tight"><span class="tag">FlutterFlow</span><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Firestore</span><span class="tag">Postman</span></div>
+    </div>
+  </section>
+
+  <div class="container detail-cover">
+    <div class="project__media project__media--mobile" aria-hidden="true">
+      <span data-i18n="projects.captureSoon">Capture à venir</span>
+    </div>
+  </div>
+
+  <div class="container detail-layout">
+    <aside class="detail-toc">
+      <nav aria-labelledby="tocTitle">
+        <p class="detail-toc__title" id="tocTitle" data-i18n="detail.toc">Sommaire</p>
+        <ol>
+            <li><a href="#contexte" data-i18n="leshalles.contexte.title">Contexte</a></li>
+            <li><a href="#fonctionnalites" data-i18n="leshalles.fonctionnalites.title">Fonctionnalités</a></li>
+            <li><a href="#demarche" data-i18n="leshalles.demarche.title">Ma démarche</a></li>
+            <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
+            <li><a href="#video" data-i18n="detail.video">Démonstration vidéo</a></li>
+            <li><a href="#captures" data-i18n="detail.shots">Captures d'écran</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="detail-content">
+      <section class="detail-section" id="contexte">
+        <h2 data-i18n="leshalles.contexte.title">Contexte</h2>
+        <p data-i18n="leshalles.contexte.0">L'enseigne « Les Halles by Chazal » avait besoin de sa propre application mobile, pour que les magasins puissent consulter les catalogues et commander. Je l'ai construite avec FlutterFlow, un outil de développement visuel qui génère une application Flutter, en la reliant à Firebase pour les données.</p>
+        <p data-i18n="leshalles.contexte.1">Elle est directement alimentée par mon système de catalogue : un PDF déposé par le marketing devient, quelques minutes plus tard, un catalogue consultable dans l'application, avec les produits de chaque page.</p>
+      </section>
+
+      <section class="detail-section" id="fonctionnalites">
+        <h2 data-i18n="leshalles.fonctionnalites.title">Fonctionnalités</h2>
+        <ul class="check-list">
+          <li data-i18n="leshalles.fonctionnalites.0.0"><strong>Accueil</strong> : promotion du moment, recherche d'un article (avec lecture de code-barres) et accès direct aux catalogues.</li>
+          <li data-i18n="leshalles.fonctionnalites.0.1"><strong>Catalogues</strong> : liste des catalogues publiés, lecture page par page, et bouton « Voir les produits » qui liste les produits présents sur la page.</li>
+          <li data-i18n="leshalles.fonctionnalites.0.2"><strong>Fiche produit</strong> : photos, conseils de préparation, allergènes, conditionnement, et ajout au panier.</li>
+          <li data-i18n="leshalles.fonctionnalites.0.3"><strong>Animation #50ansChazal</strong> : challenges à paliers, points cumulés et boutique de cadeaux échangeables contre des points.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="demarche">
+        <h2 data-i18n="leshalles.demarche.title">Ma démarche</h2>
+        <ol class="steps">
+          <li><strong data-i18n="leshalles.demarche.0.0.t">Construire les écrans</strong><p data-i18n="leshalles.demarche.0.0.d">Pages, navigation et composants réutilisables dans l'éditeur FlutterFlow.</p></li>
+          <li><strong data-i18n="leshalles.demarche.0.1.t">Brancher les données</strong><p data-i18n="leshalles.demarche.0.1.d">Connexion à Firebase et structure des collections Firestore, dont celle des catalogues remplie par le pipeline.</p></li>
+          <li><strong data-i18n="leshalles.demarche.0.2.t">Tester les API</strong><p data-i18n="leshalles.demarche.0.2.d">Chaque appel d'API est d'abord testé dans Postman (requête, réponse, erreurs) avant d'être intégré à l'application.</p></li>
+          <li><strong data-i18n="leshalles.demarche.0.3.t">Faire évoluer</strong><p data-i18n="leshalles.demarche.0.3.d">Modifications et nouvelles fonctions au fil des besoins et des retours des utilisateurs.</p></li>
+        </ol>
+      </section>
+
+      <section class="detail-section" id="competences">
+        <h2 data-i18n="detail.skills">Compétences BTS SIO mobilisées</h2>
+        <ul class="check-list">
+          <li data-i18n="leshalles.competences.0.0">Mettre à disposition des utilisateurs un service informatique</li>
+          <li data-i18n="leshalles.competences.0.1">Répondre aux incidents et aux demandes d'assistance et d'évolution</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="video">
+        <h2 data-i18n="detail.video">Démonstration vidéo</h2>
+        <div class="demo-videos">
+          <figure class="demo-video demo-video--mobile">
+            <video controls muted playsinline preload="none" poster="../assets/projets/leshalles/../catalogue/demo-appli-les-halles.webp" src="../assets/projets/leshalles/../catalogue/demo-appli-les-halles.mp4"></video>
+            <figcaption data-i18n="leshalles.video.0">Un catalogue généré par mon pipeline, consulté dans l'application : pages, puis produits de la page.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="detail-section" id="captures">
+        <h2 data-i18n="detail.shots">Captures d'écran</h2>
+        <p class="gallery__empty" data-i18n="detail.shotsEmpty" hidden>Captures en cours de préparation.</p>
+        <div class="project__thumbs gallery gallery--mobile">
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/01-accueil.webp" alt="Accueil : promotion du moment, recherche d'article et catalogues" loading="lazy" data-i18n-alt="leshalles.shot.0">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/02-catalogues.webp" alt="Nos catalogues : les catalogues publiés" loading="lazy" data-i18n-alt="leshalles.shot.1">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/03-catalogue-page.webp" alt="Un catalogue page par page, avec le bouton « Voir les produits »" loading="lazy" data-i18n-alt="leshalles.shot.2">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/04-produits-page.webp" alt="Les produits repérés sur la page du catalogue" loading="lazy" data-i18n-alt="leshalles.shot.3">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/05-challenge.webp" alt="#50ansChazal : challenges à paliers et points" loading="lazy" data-i18n-alt="leshalles.shot.4">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/06-boutique.webp" alt="Boutique #50 ans : cadeaux échangeables contre des points" loading="lazy" data-i18n-alt="leshalles.shot.5">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/07-flutterflow.webp" alt="Construction de l'application dans l'éditeur FlutterFlow" loading="lazy" data-i18n-alt="leshalles.shot.6">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/08-firebase.webp" alt="Structure des données dans Firebase (Firestore)" loading="lazy" data-i18n-alt="leshalles.shot.7">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/leshalles/09-postman.webp" alt="Test d'un appel d'API dans Postman" loading="lazy" data-i18n-alt="leshalles.shot.8">
+          </button>
+        </div>
+        <p class="note"><span data-i18n="leshalles.note">Projet interne — code non public.</span></p>
+      </section>
+    </div>
+  </div>
+
+  <nav class="container detail-pager" aria-label="Autres projets">
+      <a href="mychazal.html" class="detail-pager__prev"><span class="detail-pager__dir" data-i18n="detail.prev">Projet précédent</span><span class="detail-pager__name" data-i18n="mychazal.title">myChazal — application mobile des commerciaux</span></a>
+      <a href="cinesio.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="cinesio.title">CinéSIO</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="i18n-projets.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

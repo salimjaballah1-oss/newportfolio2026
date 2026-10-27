@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="mychazal.pageTitle">myChazal — application mobile des commerciaux — Salim Jaballah</title>
+<meta name="description" content="L'application Android / iOS des commerciaux : catalogues, devis, challenges et points, messagerie. Je la maintiens et la fais évoluer avec un autre développeur de l'entreprise.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="myChazal — application mobile des commerciaux — Salim Jaballah">
+<meta property="og:description" content="L'application Android / iOS des commerciaux : catalogues, devis, challenges et points, messagerie. Je la maintiens et la fais évoluer avec un autre développeur de l'entreprise.">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Page générée : le français est ici, l'anglais dans projets/i18n-projets.js -->
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="../index.html#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="../index.html#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="../index.html#projets" aria-current="true" data-i18n="nav.projects">Projets</a>
+      <a href="../index.html#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="../index.html#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="detail">
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets" data-i18n="detail.back">← Tous les projets</a>
+      <div class="project__meta">
+        <span class="badge badge--pro" data-i18n="badge.pro">Alternance — Chazal</span>
+        <span class="muted" data-i18n="mychazal.date">Depuis août 2026 · maintenance et évolutions</span>
+      </div>
+      <h1 class="detail-hero__title" data-i18n="mychazal.title">myChazal — application mobile des commerciaux</h1>
+      <p class="detail-hero__lead" data-i18n="mychazal.lead">L'application Android / iOS des commerciaux : catalogues, devis, challenges et points, messagerie. Je la maintiens et la fais évoluer avec un autre développeur de l'entreprise.</p>
+      <dl class="facts">
+          <div><dt data-i18n="fact.period">Période</dt><dd><span data-i18n="mychazal.fact.period">Depuis août 2026</span></dd></div>
+          <div><dt data-i18n="fact.role">Mon rôle</dt><dd><span data-i18n="mychazal.fact.role">Maintenance et évolutions</span></dd></div>
+          <div><dt data-i18n="fact.team">Équipe</dt><dd><span data-i18n="mychazal.fact.team">2 développeurs</span></dd></div>
+          <div><dt data-i18n="fact.users">Utilisateurs</dt><dd><span data-i18n="mychazal.fact.users">Commerciaux (Android / iOS)</span></dd></div>
+      </dl>
+      <div class="tags tags--tight"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">FlutterFlow</span><span class="tag">Firebase</span><span class="tag">Firestore</span></div>
+    </div>
+  </section>
+
+  <div class="container detail-cover">
+    <div class="project__media project__media--mobile" aria-hidden="true">
+      <span data-i18n="projects.captureSoon">Capture à venir</span>
+    </div>
+  </div>
+
+  <div class="container detail-layout">
+    <aside class="detail-toc">
+      <nav aria-labelledby="tocTitle">
+        <p class="detail-toc__title" id="tocTitle" data-i18n="detail.toc">Sommaire</p>
+        <ol>
+            <li><a href="#contexte" data-i18n="mychazal.contexte.title">Contexte</a></li>
+            <li><a href="#realisations" data-i18n="mychazal.realisations.title">Ce que j'ai réalisé</a></li>
+            <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
+            <li><a href="#captures" data-i18n="detail.shots">Captures d'écran</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="detail-content">
+      <section class="detail-section" id="contexte">
+        <h2 data-i18n="mychazal.contexte.title">Contexte</h2>
+        <p data-i18n="mychazal.contexte.0">myChazal est construite avec FlutterFlow (Flutter) sur Firebase : authentification, base Firestore, notifications, configuration à distance. Les commerciaux y consultent les catalogues, préparent des devis, suivent leurs challenges et leurs points, et échangent des messages.</p>
+        <p data-i18n="mychazal.contexte.1">Elle est directement reliée à mon système de catalogue : les catalogues publiés par le pipeline arrivent dans la base Firebase de l'application.</p>
+      </section>
+
+      <section class="detail-section" id="realisations">
+        <h2 data-i18n="mychazal.realisations.title">Ce que j'ai réalisé</h2>
+        <div class="challenges">
+          <div class="challenge">
+            <h3 data-i18n="mychazal.realisations.0.0.t">L'application ne compilait plus</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="mychazal.realisations.0.0.p">Le build Android échouait à cause de dépendances incompatibles.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="mychazal.realisations.0.0.s">Mise à jour des bibliothèques en cause et adaptation des widgets générés par FlutterFlow ; mémoire du build Gradle réduite.</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="mychazal.realisations.0.1.t">Plantages au lancement</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="mychazal.realisations.0.1.p">Une image manquante non gérée faisait planter l'écran d'accueil et la barre de navigation.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="mychazal.realisations.0.1.s">Vérifications ajoutées sur les données absentes, l'application s'ouvre même si un contenu est incomplet.</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="mychazal.realisations.0.2.t">Partager un catalogue</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="mychazal.realisations.0.2.p">Le bouton de partage n'envoyait pas un lien exploitable.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="mychazal.realisations.0.2.s">Le lien pointe désormais vers la visionneuse en ligne générée par le système de catalogue, à la bonne page.</span></p>
+          </div>
+          <div class="challenge">
+            <h3 data-i18n="mychazal.realisations.0.3.t">Catalogues expirés encore visibles</h3>
+            <p><span class="challenge__label" data-i18n="challenge.problem">Problème</span> <span data-i18n="mychazal.realisations.0.3.p">Un catalogue désactivé restait accessible, notamment par un lien direct ou partagé.</span></p>
+            <p><span class="challenge__label" data-i18n="challenge.solution">Solution</span> <span data-i18n="mychazal.realisations.0.3.s">Masquage côté application, dans la liste comme en accès direct — sans toucher aux règles de la base, pour ne pas casser la visionneuse.</span></p>
+          </div>
+        </div>
+        <p data-i18n="mychazal.realisations.1">J'ai aussi retiré l'onglet Prospect, désormais géré par le CRM ChazalGo, en le remplaçant par un message de redirection.</p>
+      </section>
+
+      <section class="detail-section" id="competences">
+        <h2 data-i18n="detail.skills">Compétences BTS SIO mobilisées</h2>
+        <ul class="check-list">
+          <li data-i18n="mychazal.competences.0.0">Répondre aux incidents et aux demandes d'assistance et d'évolution</li>
+          <li data-i18n="mychazal.competences.0.1">Mettre à disposition des utilisateurs un service informatique</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="captures">
+        <h2 data-i18n="detail.shots">Captures d'écran</h2>
+        <p class="gallery__empty" data-i18n="detail.shotsEmpty" hidden>Captures en cours de préparation.</p>
+        <div class="project__thumbs gallery gallery--mobile">
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/mychazal/01-lancements.webp" alt="Écran « Lancements » : les nouveaux produits mis en avant (version de test TestFlight)" loading="lazy" data-i18n-alt="mychazal.shot.0">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/mychazal/02-catalogues.webp" alt="Liste des catalogues actifs dans l'application" loading="lazy" data-i18n-alt="mychazal.shot.1">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/mychazal/03-partage.webp" alt="Catalogue partagé, ouvert dans la visionneuse en ligne" loading="lazy" data-i18n-alt="mychazal.shot.2">
+          </button>
+        </div>
+        <p class="note"><span data-i18n="mychazal.note">Projet interne — code non public.</span></p>
+      </section>
+    </div>
+  </div>
+
+  <nav class="container detail-pager" aria-label="Autres projets">
+      <a href="chazalgo.html" class="detail-pager__prev"><span class="detail-pager__dir" data-i18n="detail.prev">Projet précédent</span><span class="detail-pager__name" data-i18n="chazalgo.title">ChazalGo — CRM web du réseau commercial</span></a>
+      <a href="les-halles.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="leshalles.title">Application mobile « Les Halles by Chazal »</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="i18n-projets.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

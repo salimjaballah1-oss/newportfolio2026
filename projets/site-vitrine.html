@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="vitrine.pageTitle">site-vitrine-BTSIO — « Bad Kings » — Salim Jaballah</title>
+<meta name="description" content="Le site vitrine et boutique d'une marque de streetwear fictive, « Bad Kings » : catalogue, fiche produit, panier, favoris et comptes, en PHP et PostgreSQL.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f2ee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="site-vitrine-BTSIO — « Bad Kings » — Salim Jaballah">
+<meta property="og:description" content="Le site vitrine et boutique d'une marque de streetwear fictive, « Bad Kings » : catalogue, fiche produit, panier, favoris et comptes, en PHP et PostgreSQL.">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Page générée : le français est ici, l'anglais dans projets/i18n-projets.js -->
+<a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="logo">Salim Jaballah</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="sr-only" data-i18n="nav.open">Ouvrir le menu</span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="../index.html#a-propos" data-i18n="nav.about">À propos</a>
+      <a href="../index.html#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="../index.html#alternance" data-i18n="nav.apprenticeship">Alternance</a>
+      <a href="../index.html#projets" aria-current="true" data-i18n="nav.projects">Projets</a>
+      <a href="../index.html#parcours-e5" data-i18n="nav.e5">Parcours E5</a>
+      <a href="../index.html#contact" class="site-nav__cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" role="group" aria-label="Langue du site / Site language">
+        <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="detail">
+
+  <section class="detail-hero">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets" data-i18n="detail.back">← Tous les projets</a>
+      <div class="project__meta">
+        <span class="badge" data-i18n="badge.sio1">Projet BTS SIO — SIO1</span>
+        <span class="muted" data-i18n="vitrine.date">Mai 2026 · Solo</span>
+      </div>
+      <h1 class="detail-hero__title" data-i18n="vitrine.title">site-vitrine-BTSIO — « Bad Kings »</h1>
+      <p class="detail-hero__lead" data-i18n="vitrine.lead">Le site vitrine et boutique d'une marque de streetwear fictive, « Bad Kings » : catalogue, fiche produit, panier, favoris et comptes, en PHP et PostgreSQL.</p>
+      <dl class="facts">
+          <div><dt data-i18n="fact.period">Période</dt><dd><span data-i18n="vitrine.fact.period">Mai 2026 (SIO1)</span></dd></div>
+          <div><dt data-i18n="fact.role">Mon rôle</dt><dd><span data-i18n="vitrine.fact.role">Développement complet</span></dd></div>
+          <div><dt data-i18n="fact.team">Équipe</dt><dd><span data-i18n="vitrine.fact.team">Seul</span></dd></div>
+          <div><dt data-i18n="fact.context">Cadre</dt><dd><span data-i18n="vitrine.fact.context">Projet de formation</span></dd></div>
+      </dl>
+      <div class="tags tags--tight"><span class="tag">PHP</span><span class="tag">PDO</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">HTML / CSS</span></div>
+    </div>
+  </section>
+
+  <div class="container detail-cover">
+    <div class="project__media" aria-hidden="true">
+      <span data-i18n="projects.captureSoon">Capture à venir</span>
+    </div>
+  </div>
+
+  <div class="container detail-layout">
+    <aside class="detail-toc">
+      <nav aria-labelledby="tocTitle">
+        <p class="detail-toc__title" id="tocTitle" data-i18n="detail.toc">Sommaire</p>
+        <ol>
+            <li><a href="#contexte" data-i18n="vitrine.contexte.title">Contexte</a></li>
+            <li><a href="#fonctionnalites" data-i18n="vitrine.fonctionnalites.title">Fonctionnalités</a></li>
+            <li><a href="#architecture" data-i18n="vitrine.architecture.title">Architecture & sécurité</a></li>
+            <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
+            <li><a href="#captures" data-i18n="detail.shots">Captures d'écran</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <div class="detail-content">
+      <section class="detail-section" id="contexte">
+        <h2 data-i18n="vitrine.contexte.title">Contexte</h2>
+        <p data-i18n="vitrine.contexte.0">Deuxième exercice de BTS SIO1, réalisé seul. Il reprend une architecture proche de CinéSIO (pages, repositories, connexion PDO), appliquée cette fois à un catalogue de produits, avec en plus une gestion de panier.</p>
+      </section>
+
+      <section class="detail-section" id="fonctionnalites">
+        <h2 data-i18n="vitrine.fonctionnalites.title">Fonctionnalités</h2>
+        <ul class="check-list">
+          <li data-i18n="vitrine.fonctionnalites.0.0">Accueil, catalogue de produits et fiche produit.</li>
+          <li data-i18n="vitrine.fonctionnalites.0.1">Panier : ajout, modification de la quantité, suppression et calcul du total.</li>
+          <li data-i18n="vitrine.fonctionnalites.0.2">Favoris : ajout, retrait et liste.</li>
+          <li data-i18n="vitrine.fonctionnalites.0.3">Inscription, connexion et déconnexion.</li>
+          <li data-i18n="vitrine.fonctionnalites.0.4">Formulaire de contact et pages de présentation (histoire de la marque, équipe et postes).</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="architecture">
+        <h2 data-i18n="vitrine.architecture.title">Architecture & sécurité</h2>
+        <p data-i18n="vitrine.architecture.0">Base PostgreSQL (hébergée sur Supabase) de 5 tables : utilisateurs, produits, panier, favoris et messages de contact. Le panier et les favoris utilisent une clé composite utilisateur + produit, avec suppression en cascade.</p>
+        <ul class="check-list">
+          <li data-i18n="vitrine.architecture.1.0">Un repository par table, toutes les requêtes sont préparées.</li>
+          <li data-i18n="vitrine.architecture.1.1">Mots de passe hachés, emails validés, échappement systématique à l'affichage.</li>
+          <li data-i18n="vitrine.architecture.1.2">Pages protégées accessibles seulement une fois connecté.</li>
+          <li data-i18n="vitrine.architecture.1.3">Identifiants de la base lus dans des variables d'environnement ou un fichier local exclu de Git.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="competences">
+        <h2 data-i18n="detail.skills">Compétences BTS SIO mobilisées</h2>
+        <ul class="check-list">
+          <li data-i18n="vitrine.competences.0.0">Mettre à disposition des utilisateurs un service informatique</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" id="captures">
+        <h2 data-i18n="detail.shots">Captures d'écran</h2>
+        <p class="gallery__empty" data-i18n="detail.shotsEmpty" hidden>Captures en cours de préparation.</p>
+        <div class="project__thumbs gallery">
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/vitrine/01-accueil.png" alt="Page d'accueil du site vitrine « Bad Kings »" loading="lazy" data-i18n-alt="vitrine.shot.0">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/vitrine/02-produits.png" alt="Catalogue de produits du site vitrine" loading="lazy" data-i18n-alt="vitrine.shot.1">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/vitrine/03-fiche-produit.png" alt="Fiche détail d'un produit avec ajout au panier et aux favoris" loading="lazy" data-i18n-alt="vitrine.shot.2">
+          </button>
+          <button type="button" class="project__thumb">
+            <img src="../assets/projets/vitrine/04-panier.png" alt="Panier dynamique avec gestion des quantités" loading="lazy" data-i18n-alt="vitrine.shot.3">
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <nav class="container detail-pager" aria-label="Autres projets">
+      <a href="cinesio.html" class="detail-pager__prev"><span class="detail-pager__dir" data-i18n="detail.prev">Projet précédent</span><span class="detail-pager__name" data-i18n="cinesio.title">CinéSIO</span></a>
+      <a href="agent-emploi.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="agent.title">Agent de recherche d'emploi</span></a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Salim Jaballah — <span data-i18n="footer.text">BTS SIO, option SLAM</span> · <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" data-i18n-aria="lightbox.dialogLabel" aria-label="Aperçu de l'image">
+    <button type="button" class="lightbox__close" data-lightbox-close data-i18n-aria="lightbox.close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-i18n-aria="lightbox.prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-i18n-aria="lightbox.next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__dots"></div>
+    <p class="lightbox__caption" aria-hidden="true"></p>
+    <p class="sr-only lightbox__status" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="i18n-projets.js"></script>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

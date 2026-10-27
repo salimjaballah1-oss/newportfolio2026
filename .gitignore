@@ -1,0 +1,5 @@
+# Captures brutes déposées pour tri : jamais publiées telles quelles
+# (elles peuvent contenir des données internes). Seules les captures
+# triées et vérifiées vont dans assets/projets/.
+captures/*
+!captures/LISEZMOI.md
