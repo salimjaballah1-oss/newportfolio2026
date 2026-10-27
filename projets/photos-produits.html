@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../style.css?v=20261027b">
+<link rel="stylesheet" href="../style.css?v=20261027c">
 </head>
 <body>
 
@@ -66,7 +66,7 @@
           <div><dt data-i18n="fact.users">Utilisateurs</dt><dd><span data-i18n="photos.fact.users">Service marketing</span></dd></div>
           <div><dt data-i18n="fact.status">Statut</dt><dd><span data-i18n="photos.fact.status">En production sur l'intranet</span></dd></div>
       </dl>
-      <div class="tags tags--tight"><span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">sharp</span><span class="tag">Amazon S3</span><span class="tag">OpenRouter</span><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Coolify</span></div>
+      <div class="tags tags--tight"><span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">sharp</span><span class="tag">Amazon S3</span><span class="tag">OpenRouter</span><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Coolify</span></div>
     </div>
   </section>
 
@@ -85,6 +85,7 @@
             <li><a href="#fonctionnalites" data-i18n="photos.fonctionnalites.title">Fonctionnalités</a></li>
             <li><a href="#fonctionnement" data-i18n="photos.fonctionnement.title">Comment une photo est traitée</a></li>
             <li><a href="#architecture" data-i18n="photos.architecture.title">Architecture & déploiement</a></li>
+            <li><a href="#ged" data-i18n="photos.ged.title">Synchronisation vers l'ERP (script Python)</a></li>
             <li><a href="#difficultes" data-i18n="photos.difficultes.title">Difficultés rencontrées</a></li>
             <li><a href="#evolution" data-i18n="photos.evolution.title">Évolution du projet</a></li>
             <li><a href="#competences" data-i18n="detail.skills">Compétences BTS SIO mobilisées</a></li>
@@ -122,7 +123,7 @@
           <li><strong data-i18n="photos.fonctionnement.0.2.t">Mise au format web</strong><p data-i18n="photos.fonctionnement.0.2.d">L'image est centrée sur un fond blanc de taille fixe (1024×768, 1280×1024 ou 1600×1200 selon la source), avec une marge, puis compressée en JPEG.</p></li>
           <li><strong data-i18n="photos.fonctionnement.0.3.t">Envoi au site</strong><p data-i18n="photos.fonctionnement.0.3.d">La version web est envoyée à l'API du site, et une copie est gardée sur S3.</p></li>
           <li><strong data-i18n="photos.fonctionnement.0.4.t">Vérification</strong><p data-i18n="photos.fonctionnement.0.4.d">L'outil vérifie que l'URL renvoyée est réellement accessible avant d'annoncer la réussite.</p></li>
-          <li><strong data-i18n="photos.fonctionnement.0.5.t">Vers l'ERP</strong><p data-i18n="photos.fonctionnement.0.5.d">Chaque jour, un script Python copie les nouvelles photos web vers la GED de l'ERP (voir le projet dédié).</p></li>
+          <li><strong data-i18n="photos.fonctionnement.0.5.t">Vers l'ERP</strong><p data-i18n="photos.fonctionnement.0.5.d">Un script Python copie ensuite les nouvelles photos web vers la GED de l'ERP (voir plus bas).</p></li>
         </ol>
       </section>
 
@@ -130,6 +131,22 @@
         <h2 data-i18n="photos.architecture.title">Architecture & déploiement</h2>
         <p data-i18n="photos.architecture.0">L'interface est en Vue 3 (Vite). Un micro-service Node.js (Express, Multer, sharp, AWS SDK) gère tout ce qui touche à S3 et aux fichiers lourds. L'ensemble tient dans une seule image Docker multi-étapes : Nginx sert l'interface et fait office de proxy vers l'API et le micro-service, ce qui règle aussi les problèmes de CORS. Le tout est déployé sur l'intranet avec Coolify.</p>
         <p data-i18n="photos.architecture.1">Côté sécurité, les appels sensibles passent par le serveur : le navigateur ne reçoit qu'un jeton de session temporaire, et les clés d'API (IA, compte technique) restent côté serveur, dans des variables d'environnement. Le micro-service n'accepte que les dossiers et les hôtes prévus.</p>
+      </section>
+
+      <section class="detail-section" id="ged">
+        <h2 data-i18n="photos.ged.title">Synchronisation vers l'ERP (script Python)</h2>
+        <p data-i18n="photos.ged.0">L'ERP de l'entreprise (Infologic) a sa propre GED : un partage réseau où chaque produit doit avoir une image nommée <code>{code}.jpg</code>. Pour éviter de recopier les photos à la main, j'ai écrit un script Python qui s'en charge.</p>
+        <ul class="check-list">
+          <li data-i18n="photos.ged.1.0"><strong>Une seule photo par produit</strong>, toujours la plus récente : si plusieurs sont arrivées, c'est la première du dernier lot envoyé qui part.</li>
+          <li data-i18n="photos.ged.1.1"><strong>Copie sans risque</strong> : fichier temporaire puis remplacement atomique, jamais de fichier à moitié écrit ni de doublon.</li>
+          <li data-i18n="photos.ged.1.2"><strong>Traçabilité</strong> : mode simulation, journal détaillé, et registre des envois qui s'ouvre directement dans Excel.</li>
+          <li data-i18n="photos.ged.1.3"><strong>Robustesse</strong> : une erreur n'est jamais mémorisée comme réussie, le fichier est retenté au passage suivant ; les clés AWS restent hors de OneDrive.</li>
+        </ul>
+        <div class="stats">
+          <div class="stat"><span class="stat__value">809</span><span class="stat__label" data-i18n="photos.ged.2.0">photos envoyées dans la GED</span></div>
+          <div class="stat"><span class="stat__value">~1 min</span><span class="stat__label" data-i18n="photos.ged.2.1">pour traiter 276 nouvelles photos</span></div>
+          <div class="stat"><span class="stat__value">0</span><span class="stat__label" data-i18n="photos.ged.2.2">erreur sur les envois réels</span></div>
+        </div>
       </section>
 
       <section class="detail-section" id="difficultes">
@@ -218,9 +235,6 @@
           <button type="button" class="project__thumb">
             <img src="../assets/projets/photos/07-historique.webp" alt="Historique des modifications d'images" loading="lazy" data-i18n-alt="photos.shot.6">
           </button>
-          <button type="button" class="project__thumb">
-            <img src="../assets/projets/photos/08-import-masse.webp" alt="Import en masse : association automatique des fichiers aux produits, avant validation" loading="lazy" data-i18n-alt="photos.shot.7">
-          </button>
         </div>
         <p class="note"><span data-i18n="photos.note">Projet interne — code non public. Détail complet disponible sur demande (rapport de projet).</span></p>
       </section>
@@ -228,7 +242,7 @@
   </div>
 
   <nav class="container detail-pager" aria-label="Autres projets">
-      <a href="synchro-s3-ged.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="ged.title">Script de synchronisation des photos vers la GED</span></a>
+      <a href="catalogue.html" class="detail-pager__next"><span class="detail-pager__dir" data-i18n="detail.next">Projet suivant</span><span class="detail-pager__name" data-i18n="catalogue.title">Système de mise en ligne du catalogue produit</span></a>
   </nav>
 
 </main>
@@ -258,8 +272,8 @@
   </div>
 </div>
 
-<script src="i18n-projets.js?v=20261027b"></script>
-<script src="../i18n.js?v=20261027b"></script>
-<script src="../script.js?v=20261027b"></script>
+<script src="i18n-projets.js?v=20261027c"></script>
+<script src="../i18n.js?v=20261027c"></script>
+<script src="../script.js?v=20261027c"></script>
 </body>
 </html>

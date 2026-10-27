@@ -34,6 +34,4 @@ GitHub Pages, Netlify ou Vercel en pointant sur `index.html`.
 ## À compléter
 
 - Captures d'écran des projets (voir `CAPTURES.md`)
-- Fiche complète de `calorie-app`
-- Lien du dépôt CinéSIO, une fois le mot de passe de la base Supabase changé
 - Section personnalité / centres d'intérêt (« En dehors du code »)

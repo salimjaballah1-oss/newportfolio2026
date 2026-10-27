@@ -23,23 +23,24 @@ Pour voir les emplacements encore vides : ouvrir une page projet avec `?captures
 - Fais valider les captures des projets Chazal par ton maître d'alternance.
 - Desktop : fenêtre ~1440 px de large, zoom 100 %. Mobile : portrait.
 
-## État des captures
+## Captures en ligne
 
-✅ = en ligne · ⬜ = emplacement prévu, encore vide. Images en `.webp`, vidéos en
-`.mp4` (H.264, sans le son).
+Images en `.webp`, vidéos en `.mp4` (H.264, sans le son). Seuls les projets qui
+ont de vraies captures sont présentés sur le site : pour en ajouter un autre
+(CinéSIO, agent emploi, calorie-app…), dépose d'abord ses captures.
 
-| Projet | Dossier | Captures |
+| Projet | Dossier | Contenu |
 |---|---|---|
-| Photos produits | `assets/projets/photos/` | ✅ recherche · fiche produit · actions · IA · ambiance · ma liste · historique · vidéo de démo — ⬜ `08-import-masse` |
-| Synchro S3 → GED | `assets/projets/ged/` | ⬜ `01-terminal` · `02-registre-excel` · `03-dossier-ged` |
-| Catalogue | `assets/projets/catalogue/` | ✅ dépôt · générer · catalogues en ligne · visionneuse · 2 vidéos — ⬜ `05-suivi` (page de suivi pendant une génération) |
-| ChazalGo | `assets/projets/chazalgo/` | ✅ carte (noms floutés) · utilisateurs (floutés) · droits — ⬜ `04-tableau-de-bord` (avec de vraies valeurs, chiffres floutés) |
-| myChazal (mobile) | `assets/projets/mychazal/` | ✅ lancements — ⬜ `02-catalogues` · `03-partage` |
-| Les Halles (mobile) | `assets/projets/leshalles/` | ✅ accueil · catalogues · page · produits · challenge · boutique — ⬜ `07-flutterflow` · `08-firebase` · `09-postman` |
-| CinéSIO | `assets/projets/cinesio/` | ⬜ `01-catalogue` · `02-fiche-film` · `03-favoris` · `04-ajout-film` · `05-profil` |
-| site-vitrine-BTSIO | `assets/projets/vitrine/` | ✅ accueil · produits · fiche produit · panier |
-| Agent emploi | `assets/projets/agent/` | ⬜ `01-offres` · `02-detail-score` · `03-candidatures` · `04-recherche-auto` · `05-tests` |
-| calorie-app | `assets/projets/calorie/` | ⬜ `01-suivi` · `02-recherche-aliment` |
+| Photos produits (+ synchro GED) | `assets/projets/photos/` | 7 captures, 1 vidéo |
+| Catalogue | `assets/projets/catalogue/` | 4 captures, 2 vidéos |
+| ChazalGo | `assets/projets/chazalgo/` | 3 captures (noms et emails floutés) |
+| Les Halles (mobile) | `assets/projets/leshalles/` | 6 captures (+ vidéo du catalogue) |
+| myChazal (mobile) | `assets/projets/mychazal/` | 1 capture |
+| site-vitrine-BTSIO | `assets/projets/vitrine/` | 4 captures |
+
+Captures utiles à ajouter plus tard : suivi d'une génération de catalogue,
+dashboard ChazalGo (chiffres floutés), FlutterFlow / Firebase / Postman pour
+Les Halles, catalogues et partage dans myChazal.
 
 ## Modifier le contenu des pages projet
 

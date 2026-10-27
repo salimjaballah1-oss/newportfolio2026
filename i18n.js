@@ -44,7 +44,7 @@
     "about.t3period": "Since September 2026 · SIO2",
     "about.t2text": "1<sup>st</sup> year of BTS SIO at Lycée Louis Pergaud, already on a work-study " +
       "program at <strong>Chazal</strong> (2 weeks at the company / 3 weeks at school). Built " +
-      "CinéSIO and site-vitrine-BTSIO, my first complete web projects.",
+      "my first complete PHP web projects, including site-vitrine-BTSIO.",
     "about.t3text": "2<sup>nd</sup> year, on a work-study program at Chazal (2 weeks at the " +
       "company / 3 weeks at school), within the IT department of the Dole site.",
     "about.workSubtitle": "How I work",
@@ -63,16 +63,16 @@
     "skills.intro": "Technologies actually used across my projects — school, personal, or " +
       "work-study.",
     "skills.card1.title": "Web development",
-    "skills.card1.ref": "CinéSIO, site-vitrine-BTSIO, photo interface, catalog system and " +
-      "ChazalGo CRM at Chazal, job search agent",
+    "skills.card1.ref": "site-vitrine-BTSIO, photo interface, catalog system and " +
+      "ChazalGo CRM at Chazal",
     "skills.card2.title": "Automation & scripting",
     "skills.card2.ref": "Catalog pipeline (PDF → images → Firestore), image processing, " +
       "S3 → document management sync at Chazal",
     "skills.card3.title": "Databases",
     "skills.card3.tag1": "Firestore (NoSQL)",
     "skills.card3.tag2": "RLS rules",
-    "skills.card3.ref": "CinéSIO, site-vitrine-BTSIO (Supabase), ChazalGo CRM (Supabase, " +
-      "RLS), job search agent (SQLite), Chazal catalog (Firestore)",
+    "skills.card3.ref": "site-vitrine-BTSIO (PostgreSQL on Supabase), ChazalGo CRM (Supabase, " +
+      "RLS), catalog system and mobile apps (Firestore)",
     "skills.card4.title": "Cloud, APIs & AI",
     "skills.card4.tag1": "Generative AI (OpenRouter)",
     "skills.card4.ref": "Image storage and processing, catalog system, product visual " +
@@ -82,13 +82,12 @@
     "skills.card5.tag2": "Prepared statements",
     "skills.card5.tag3": "Data validation",
     "skills.card5.tag4": "XSS protection",
-    "skills.card5.tag5": "CSRF tokens",
     "skills.card5.tag6": "Secrets kept out of code (.env)",
-    "skills.card5.ref": "Implemented on CinéSIO (PDO, password_hash, htmlspecialchars) and " +
-      "on the job search agent (CSRF, local-only server)",
+    "skills.card5.ref": "Implemented on site-vitrine-BTSIO (PDO, password_hash, htmlspecialchars) and " +
+      "on Chazal's tools (API keys kept server-side, environment variables)",
     "skills.card6.title": "Tools & deployment",
     "skills.card6.ref": "Containerization and deployment of internal tools on Chazal's " +
-      "intranet, automated testing",
+      "intranet, Git versioning",
     "skills.card7.title": "Mobile",
     "skills.card7.ref": "Built the Les Halles app, maintenance and updates of the myChazal " +
       "sales app",
@@ -123,14 +122,6 @@
 
     "badge.pro": "Work-study — Chazal",
     "badge.sio1": "BTS SIO Project — Year 1",
-    "badge.perso": "Personal project",
-
-    "agent.date": "October 2026 · in progress",
-    "agent.title": "Job search agent",
-    "agent.note": "Local source code. Next steps: tailored cover letters and Excel export.",
-
-    "calorie.date": "Offline — runs locally",
-    "calorie.note": "Entry to be completed (specific features, screenshots).",
 
     "e5.title": "Professional path — E5 summary",
     "e5.intro": "Summary table linking each achievement to the BTS SIO reference-framework " +
@@ -158,14 +149,10 @@
     "e5.row9.realisation": "ChazalGo CRM (Chazal)",
     "e5.row9.preuves": "Functional explanations, screenshots (data blurred), demo possible " +
       "during the oral defense — code not shareable",
-    "e5.row7.realisation": "Job search agent",
-    "e5.row7.preuves": "Local source code, automated tests, screenshots (coming soon)",
     "e5.row2.preuves": "Functional explanations, screenshots and demo videos — code not " +
       "shareable",
     "e5.row3.competences": "Providing users with an IT service",
-    "e5.rowGithub.preuves": "GitHub source code, screenshots (coming soon)",
-    "e5.row5.competences": "Organizing one's professional development",
-    "e5.row5.preuves": "Local source code, screenshots (coming soon)",
+    "e5.rowGithub.preuves": "GitHub source code, screenshots",
     "e5.note": "Only the skills actually demonstrated by the content of each achievement " +
       "are listed here — none are added by mere assumption.",
 
@@ -182,9 +169,6 @@
       "projects.",
 
     "footer.text": "BTS SIO, SLAM track",
-
-    "e5.row10.realisation": "Photo sync to the document store (Chazal)",
-    "e5.row10.preuves": "Run log, transfer register (Excel), live demo possible during the oral exam — code not shareable",
 
     "lightbox.dialogLabel": "Image preview",
     "lightbox.close": "Close",
